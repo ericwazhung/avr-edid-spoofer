@@ -1,0 +1,2801 @@
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+   9               		.stabs	"/Users/meh/_avrProjects/LCDreIDer/50-gittifying/",100,0,2,.Ltext0
+  10               		.stabs	"main.c",100,0,2,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
+  15               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
+  28               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
+  29               		.stabs	"projInfo.h",130,0,0,0
+  30               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/inttypes.h",130,0,0,0
+  31               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/stdint.h",130,0,0,0
+  32               		.stabs	"int8_t:t(3,1)=(0,10)",128,0,121,0
+  33               		.stabs	"uint8_t:t(3,2)=(0,11)",128,0,122,0
+  34               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,123,0
+  35               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,124,0
+  36               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,125,0
+  37               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,126,0
+  38               		.stabs	"int64_t:t(3,7)=(0,6)",128,0,128,0
+  39               		.stabs	"uint64_t:t(3,8)=(0,7)",128,0,129,0
+  40               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,142,0
+  41               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,147,0
+  42               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,159,0
+  43               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,164,0
+  44               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,169,0
+  45               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,174,0
+  46               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,179,0
+  47               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,184,0
+  48               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,192,0
+  49               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,199,0
+  50               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,213,0
+  51               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,218,0
+  52               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,223,0
+  53               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,228,0
+  54               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,233,0
+  55               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,238,0
+  56               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,246,0
+  57               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,253,0
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 2
+
+
+  58               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,273,0
+  59               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,278,0
+  60               		.stabn	162,0,0,0
+  61               		.stabs	"int_farptr_t:t(2,1)=(3,5)",128,0,77,0
+  62               		.stabs	"uint_farptr_t:t(2,2)=(3,6)",128,0,81,0
+  63               		.stabn	162,0,0,0
+  64               		.stabn	162,0,0,0
+  65               		.stabs	"main.h",130,0,0,0
+  66               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/avr/io.h",130,0,0,0
+  67               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/avr/fuse.h",130,0,0,0
+  68               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+  69               		.stabn	162,0,0,0
+  70               		.stabn	162,0,0,0
+  71               		.stabs	"_commonCode_localized/heartbeat/1.21/heartbeat.h",130,0,0,0
+  72               		.stabs	"./_commonCode_localized/hfModulation/1.00/hfModulation.h",130,0,0,0
+  73               		.stabs	"hfm_t:t(8,1)=(8,2)=B(8,3)=s4desiredSum:(3,3),0,16;maxPower:(3,2),16,8;power:(3,2),24,8;;",
+  74               		.stabn	162,0,0,0
+  75               		.stabs	"./_commonCode_localized/dmsTimer/1.13/dmsTimer.h",130,0,0,0
+  76               		.stabs	"dms6sec_t:t(9,1)=(3,4)",128,0,81,0
+  77               		.stabs	"dms4day_t:t(9,2)=(3,6)",128,0,83,0
+  78               		.stabs	"dmsMax_t:t(9,3)=(3,6)",128,0,84,0
+  79               		.stabn	162,0,0,0
+  80               		.stabn	162,0,0,0
+  81               		.stabn	162,0,0,0
+  82               		.stabs	"_commonCode_localized/sineTable/0.99/sineTable.h",130,0,0,0
+  83               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/avr/pgmspace.h",130,0,0,0
+  84               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/include/stddef.h",130,0,0,0
+  85               		.stabs	"size_t:t(12,1)=(0,4)",128,0,211,0
+  86               		.stabn	162,0,0,0
+  87               		.stabs	"prog_void:t(11,1)=(11,2)=(11,2)",128,0,217,0
+  88               		.stabs	"prog_char:t(11,3)=(11,4)=@s8;r(11,4);0;255;",128,0,218,0
+  89               		.stabs	"prog_uchar:t(11,5)=(11,6)=@s8;r(11,6);0;255;",128,0,219,0
+  90               		.stabs	"prog_int8_t:t(11,7)=(11,8)=(0,10)",128,0,221,0
+  91               		.stabs	"prog_uint8_t:t(11,9)=(11,10)=(0,11)",128,0,222,0
+  92               		.stabs	"prog_int16_t:t(11,11)=(11,12)=(0,1)",128,0,223,0
+  93               		.stabs	"prog_uint16_t:t(11,13)=(11,14)=(0,4)",128,0,224,0
+  94               		.stabs	"prog_int32_t:t(11,15)=(11,16)=(0,3)",128,0,225,0
+  95               		.stabs	"prog_uint32_t:t(11,17)=(11,18)=(0,5)",128,0,226,0
+  96               		.stabs	"prog_int64_t:t(11,19)=(11,20)=(0,6)",128,0,228,0
+  97               		.stabs	"prog_uint64_t:t(11,21)=(11,22)=(0,7)",128,0,229,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"theta_t:t(10,1)=(3,3)",128,0,76,0
+ 100               		.stabs	"axis_t:t(10,2)=(3,5)",128,0,123,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"usi_i2c_awaitStart:F(0,15)",36,0,621,usi_i2c_awaitStart
+ 103               	.global	usi_i2c_awaitStart
+ 104               		.type	usi_i2c_awaitStart, @function
+ 105               	usi_i2c_awaitStart:
+ 106               		.stabd	46,0,0
+   1:main.c        **** #include "projInfo.h"	//Don't include in main.h 'cause that's included in other .c's?
+   2:main.c        **** #include "main.h"
+   3:main.c        **** 
+   4:main.c        **** //#include _USI_UART_HEADER_
+   5:main.c        **** //#include _UART_IN_HEADER_
+   6:main.c        **** #include _SINETABLE_HEADER_
+   7:main.c        **** //#include _MULTDIV64_HEADER_
+   8:main.c        **** //#include _GOERTZ_HEADER_
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 3
+
+
+   9:main.c        **** //#include <util/delay.h>	//for delay_us in initializing the PLL...
+  10:main.c        **** //#include <stdio.h> //for sprintf
+  11:main.c        **** 
+  12:main.c        **** 
+  13:main.c        **** 
+  14:main.c        **** //Need to save memory space for the Tiny45...
+  15:main.c        **** #define FADER_ENABLED TRUE //FALSE
+  16:main.c        **** 
+  17:main.c        **** 
+  18:main.c        **** //For hacking when connected in single-pix mode
+  19:main.c        **** // (e.g. every-other pixel will either be black or white)
+  20:main.c        **** // Just comment-them-out when the single-to-dual converter is ready...
+  21:main.c        **** //#define H_RES	700L
+  22:main.c        **** // Unused:
+  23:main.c        **** //#define V_RES	1050
+  24:main.c        **** 
+  25:main.c        **** //A/O v48:
+  26:main.c        **** // I tend to use SwitchResX to test values, so set those values here.
+  27:main.c        **** // These are the values output by the GPU (single-pixel)
+  28:main.c        **** // They'll be converted to dual-pixel values as appropriate...
+  29:main.c        **** // (And apparently some of the math divides it in half then later
+  30:main.c        **** //  multiplies it by 2... so best not to have odd values here)
+  31:main.c        **** #define PIX_CLK_GPU	(100000000UL)
+  32:main.c        **** 
+  33:main.c        **** #define H_ACTIVE_GPU	(1400)		//Active pixels
+  34:main.c        **** #define H_FP_GPU		(16)			//Front Porch
+  35:main.c        **** #define H_WIDTH_GPU	(16)			//Sync Width
+  36:main.c        **** #define H_BP_GPU		(120)			//Back Porch
+  37:main.c        **** //a/o v48:
+  38:main.c        **** //Oddly, 16,16,64 worked with SwitchResX, but *here* they caused a
+  39:main.c        **** // horizontal shift... 120 seems to have fixed it.
+  40:main.c        **** // It could be that the display was already properly-synced from a
+  41:main.c        **** // different timing, then switching to the new timing allowed it to remain
+  42:main.c        **** // synced. Or maybe I've got some integer-rounding in here...? I dunno.
+  43:main.c        **** 
+  44:main.c        **** 
+  45:main.c        **** #define V_ACTIVE_GPU	(1050)		//Active Rows
+  46:main.c        **** #define V_FP_GPU		(0)			//Front Porch
+  47:main.c        **** #define V_WIDTH_GPU	(2)			//Sync Rows
+  48:main.c        **** #define V_BP_GPU		(6)			//Back Porch
+  49:main.c        **** 
+  50:main.c        **** 
+  51:main.c        **** //These are dual-pixel frequencies...
+  52:main.c        **** // e.g. the single-pixel transmitter (built into the mac)
+  53:main.c        **** // runs at twice this speed...
+  54:main.c        **** //15MHz looks nasty on boot, but macOS handles it fine
+  55:main.c        **** //20MHz Boots fine
+  56:main.c        **** //85MHz (single) looks great, only slight flicker (42.5MHz dual) = 47Hz
+  57:main.c        **** //SwitchResX Test at 53Hz = color inversion like the plasma...
+  58:main.c        **** // bit-shifts due to unmatched cable lengths?
+  59:main.c        **** // bounce due to termination placement?
+  60:main.c        **** //#define PIX_CLK_OVERRIDE (42500000L)
+  61:main.c        **** // As Of v47: 100MHz works, 104 causes jitter... (tested in SwitchResX)
+  62:main.c        **** 
+  63:main.c        **** #define PIX_CLK_OVERRIDE (PIX_CLK_GPU/2) //(50000000L)
+  64:main.c        **** 
+  65:main.c        **** #define H_IMAGE_SIZE_MM_LTD   245L
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 4
+
+
+  66:main.c        **** 
+  67:main.c        **** 
+  68:main.c        **** //WTF: 4196 Bytes in Text region, not complaining?!
+  69:main.c        **** //  Apparently somewhere in avr-gcc/libc...?
+  70:main.c        **** //  (avrdude gives error when trying to write...)
+  71:main.c        **** //int test[400] = {1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8};
+  72:main.c        **** /*int test(void)
+  73:main.c        **** {
+  74:main.c        **** 	int i;
+  75:main.c        **** 	int j,k;
+  76:main.c        **** 
+  77:main.c        **** 	j=0;
+  78:main.c        **** 
+  79:main.c        **** 	for(i=0; i<85; i++)
+  80:main.c        **** 	{
+  81:main.c        **** 		setbit(i%8, j);
+  82:main.c        **** 		for(k=0; k<254; k++)
+  83:main.c        **** 			setbit((k+i)%7, j);
+  84:main.c        **** 	}
+  85:main.c        **** 
+  86:main.c        **** 	return j;
+  87:main.c        **** 
+  88:main.c        **** }
+  89:main.c        **** */
+  90:main.c        **** 
+  91:main.c        **** 
+  92:main.c        **** //This is the display's pixel-clock...
+  93:main.c        **** #ifndef PIX_CLK_OVERRIDE
+  94:main.c        **** #define PIX_CLK_TYP_LTD (54000000L)
+  95:main.c        **** #else
+  96:main.c        **** #define PIX_CLK_TYP_LTD PIX_CLK_OVERRIDE
+  97:main.c        **** #endif
+  98:main.c        **** 
+  99:main.c        **** //This is the display's number of active pixel-clocks
+ 100:main.c        **** #define H_PIXEL_CLOCKS_LTD   (H_ACTIVE_GPU/2)	//700
+ 101:main.c        **** // and inactive...
+ 102:main.c        **** #define H_BLANKING_TYP_LTD 	((H_FP_GPU+H_WIDTH_GPU+H_BP_GPU)/2)	//144
+ 103:main.c        **** 
+ 104:main.c        **** //Horiz Sync Offset (THFP)
+ 105:main.c        **** //#define THFP_MIN_LTD (H_FP_GPU/2)	//8
+ 106:main.c        **** #define THFP_LTD (H_FP_GPU/2) //(THFP_MIN_LTD*2)
+ 107:main.c        **** 
+ 108:main.c        **** //Horiz Sync Pulse-Width
+ 109:main.c        **** //#define THW_MIN_LTD 	(H_WIDTH_GPU/2) // 8
+ 110:main.c        **** #define THW_LTD  (H_WIDTH_GPU/2)//(THW_MIN_LTD*2)
+ 111:main.c        **** 
+ 112:main.c        **** #ifdef H_RES
+ 113:main.c        **** // #define H_IMAGE_SIZE_MM ((uint8_t)((H_IMAGE_SIZE_MM_LTD*H_RES)/1400L))
+ 114:main.c        ****  #define H_IMAGE_SIZE_MM \
+ 115:main.c        **** 	((uint8_t)((H_IMAGE_SIZE_MM_LTD*H_RES)/(H_ACTIVE_GPU)))
+ 116:main.c        **** 
+ 117:main.c        ****  #define PIX_CLK  (PIX_CLK_TYP_LTD)
+ 118:main.c        ****  #define H_ACTIVE    (H_PIXEL_CLOCKS_LTD)
+ 119:main.c        ****  #define H_BLANKING  (H_BLANKING_TYP_LTD)
+ 120:main.c        ****  #define THFP (THFP_LTD)
+ 121:main.c        ****  #define THW (THW_LTD)
+ 122:main.c        **** #else
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 5
+
+
+ 123:main.c        ****  #define H_IMAGE_SIZE_MM H_IMAGE_SIZE_MM_LTD
+ 124:main.c        **** 
+ 125:main.c        ****  #define PIX_CLK  (PIX_CLK_TYP_LTD*2)
+ 126:main.c        ****  #define H_ACTIVE (H_PIXEL_CLOCKS_LTD*2)
+ 127:main.c        ****  #define H_BLANKING  (H_BLANKING_TYP_LTD*2)
+ 128:main.c        ****  #define THFP (THFP_LTD*2)
+ 129:main.c        ****  #define THW (THW_LTD*2)
+ 130:main.c        **** #endif
+ 131:main.c        **** 
+ 132:main.c        **** 
+ 133:main.c        **** 
+ 134:main.c        **** 
+ 135:main.c        **** 
+ 136:main.c        **** 
+ 137:main.c        **** 
+ 138:main.c        **** 
+ 139:main.c        **** 
+ 140:main.c        **** 
+ 141:main.c        **** #if !defined(__AVR_ARCH__)
+ 142:main.c        ****  #error "__AVR_ARCH__ not defined!"
+ 143:main.c        **** #endif
+ 144:main.c        **** 
+ 145:main.c        **** //#include <string.h> //for strcmp
+ 146:main.c        **** 
+ 147:main.c        **** // WTF I left this as 15 bytes but wrote 256 via usbTinyI2c 
+ 148:main.c        **** // and had no errors (in version 20)?!
+ 149:main.c        **** //uint8_t edidArray[15]; 
+ 150:main.c        **** // = {0x00,0xe1,0xd2,0xc3,0xb4,0xa5,0x96,0x87,8,9};
+ 151:main.c        **** 
+ 152:main.c        **** 
+ 153:main.c        **** 
+ 154:main.c        **** 
+ 155:main.c        **** 
+ 156:main.c        **** //R,G,B
+ 157:main.c        **** volatile uint8_t ledState[3] = {0,0,0};
+ 158:main.c        **** uint8_t ledIndex = 0;
+ 159:main.c        **** 
+ 160:main.c        **** 
+ 161:main.c        **** #define EDIDARRAYLENGTH	128 //256
+ 162:main.c        **** 
+ 163:main.c        **** 
+ 164:main.c        **** //Initial values stolen (and modified NotYet) from HV121P01-101
+ 165:main.c        **** // Notes from SPWG spec 3.8
+ 166:main.c        **** uint8_t edidArray[EDIDARRAYLENGTH] =
+ 167:main.c        **** {
+ 168:main.c        **** 	//Addr	Data	//Values		Notes
+ 169:main.c        **** //EDID Header
+ 170:main.c        **** 	[0x00]=	0,		//				EDID Header
+ 171:main.c        **** 	[0x01]=	255,
+ 172:main.c        **** 	[0x02]=	255,
+ 173:main.c        **** 	[0x03]=	255,
+ 174:main.c        **** 	[0x04]=	255,
+ 175:main.c        **** 	[0x05]=	255,
+ 176:main.c        **** 	[0x06]=	255,
+ 177:main.c        **** 	[0x07]=	0,
+ 178:main.c        **** 
+ 179:main.c        **** //Vendor/ Product ID Stuff...
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 6
+
+
+ 180:main.c        **** 	//ID Manufacturer Name
+ 181:main.c        **** 	// SPWG: "EISA manufacture code = 3 character ID (compressed ASCII)
+ 182:main.c        **** 	// edidv3: "2-byte representation of the monitor's manufacturer.
+ 183:main.c        **** 	// 	This is the same as the EISA ID. Based on compressed ASCII,
+ 184:main.c        **** 	//    0001=A...11010=Z."
+ 185:main.c        **** 	//    Bit:    7   6   5   4   3   2   1   0
+ 186:main.c        **** 	//
+ 187:main.c        **** 	//    Byte 1: 0 | 4   3   2   1   0 | 4   3
+ 188:main.c        **** 	//            * |      char 1       | char 2
+ 189:main.c        **** 	//
+ 190:main.c        **** 	//    Byte 2: 2   1   0 | 4   3   2   1   0
+ 191:main.c        **** 	//            char 2    |      char 3
+ 192:main.c        **** 	//    "EISA manufacturer ID's are issued by Microsoft" YAY!
+ 193:main.c        **** 
+ 194:main.c        **** //Must be uppercase char1-3
+ 195:main.c        **** #define TOCOMPRESSEDASCII(char1,char2,char3) \
+ 196:main.c        **** 	      ((((char1)-'@')<<10) | (((char2)-'@')<<5) | ((char3)-'@'))
+ 197:main.c        **** #define TOCOMPRESSEDASCIIBYTE1(char1,char2,char3) \
+ 198:main.c        **** 	      ((TOCOMPRESSEDASCII(char1,char2,char3))>>8)
+ 199:main.c        **** #define TOCOMPRESSEDASCIIBYTE2(char1,char2,char3) \
+ 200:main.c        **** 	      ((TOCOMPRESSEDASCII(char1,char2,char3))&0xff)
+ 201:main.c        **** 	//[0x08]=	0x30,	//LEN			ID=LEN
+ 202:main.c        **** 	//[0x09]=	0xAE,	
+ 203:main.c        **** 	[0x08]=	TOCOMPRESSEDASCIIBYTE1('M','E','H'),
+ 204:main.c        **** 	[0x09]=	TOCOMPRESSEDASCIIBYTE2('M','E','H'),
+ 205:main.c        **** 
+ 206:main.c        **** 	//ID Product Code
+ 207:main.c        **** 	// SPWG: "Pannel Supplier Reserved - Product Code"
+ 208:main.c        **** 	// edidv3: "vendor-assigned product code"
+ 209:main.c        **** 	//[0x0A]=	0x05,	//SXGA+		SXGA+ FFS
+ 210:main.c        **** 	//[0x0B]=	0x40,
+ 211:main.c        **** 	// My first product...
+ 212:main.c        **** 	//  should report <0x01><PROJ_VER>
+ 213:main.c        **** 	//  e.g. 0x01 0x30, which is kinda like version 1.30
+ 214:main.c        **** 	//  yeah-no. PROJ_VER=30 is not 0x30 it's 30
+ 215:main.c        **** 	//
+ 216:main.c        **** #if ( (PROJ_VER > 99) || (MY_EDID_PRODUCT_NUM > 99) )
+ 217:main.c        ****  #error "TOBCD(val) doesn't work with values > 99..."
+ 218:main.c        ****  #error "...either Project Ver or Product Num: congrats on making it this far!"
+ 219:main.c        **** #endif
+ 220:main.c        **** 	[0x0A]=	TOBCD(PROJ_VER),
+ 221:main.c        **** 	[0x0B]=	TOBCD(MY_EDID_PRODUCT_NUM), //0x01,
+ 222:main.c        **** 
+ 223:main.c        **** 	//32-bit serial No.
+ 224:main.c        **** 	// (optional; 0 if unused)
+ 225:main.c        **** 	[0x0C]=	0x00,	//				(blank)
+ 226:main.c        **** 	[0x0D]=	0x00,
+ 227:main.c        **** 	[0x0E]=	0x00,
+ 228:main.c        **** 	[0x0F]=	0x00,
+ 229:main.c        **** 
+ 230:main.c        **** 	//Week of manufacture
+ 231:main.c        **** 	[0x10]=	0x00,	//				(blank)
+ 232:main.c        **** 	//Year of manufacture (offset from 1990)
+ 233:main.c        **** //	[0x11]=	16,	//2006		Manufactured in 2006
+ 234:main.c        **** 	[0x11]=  (COMPILE_YEAR - 1990),
+ 235:main.c        **** 
+ 236:main.c        **** //EDID Version Info "Panel ID structure version/revision"
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 7
+
+
+ 237:main.c        **** 	//EDID Structure Ver.
+ 238:main.c        **** 	[0x12]=	0x01,	//				EDID Ver 1.0
+ 239:main.c        **** 	//EDID Revision #
+ 240:main.c        **** 	[0x13]=	0x03,	//				EDID Rev 0.3 -- Same for E-EDID
+ 241:main.c        **** 
+ 242:main.c        **** //Display Parameters
+ 243:main.c        **** 	//Video input definition:
+ 244:main.c        **** 	// SPWG: "Vidio I/P definition = Digital I/P (0x80)"
+ 245:main.c        **** 	// 0x50 deduced from 0x50 = 80, assumed reversed in HV121 LCD specs...
+ 246:main.c        **** 	// But, apparently 0x80 was correct, according to SPWG
+ 247:main.c        **** 	// According to edidv3 "Digital input requires use of the EDID structure
+ 248:main.c        **** 	//  version 2" which doesn't appear to be the case (edidv3 is old?)
+ 249:main.c        **** 	// According to E-EDID Standard (newer?):
+ 250:main.c        **** 	// "Compatibility with monitors and systems that require EDID 
+ 251:main.c        **** 	//  structure 2 is achieved by allowing EDID structure 2 to 
+ 252:main.c        **** 	//  be included in E-EDID as two extensions residing at fixed locations"
+ 253:main.c        **** 	// Looking into E-EDID for now on...
+ 254:main.c        **** 	// Bit 7 = 1 : Digital
+ 255:main.c        **** 	//   Bits 6-1: Reserved = 0
+ 256:main.c        ****   	//   Bit 0:    "DFP 1.x" "If set=1, Interface is signal compatible
+ 257:main.c        **** 	//                        with VESA DFP 1.x: TMDS CRGB, 1pix/clk,
+ 258:main.c        **** 	//								  up to 8bits/color MSB aligned, DE active high"
+ 259:main.c        **** 	//             NOT SET...
+ 260:main.c        **** 	//             So maybe edidv3 was right....?
+ 261:main.c        **** 
+ 262:main.c        **** 	[0x14]=	0x80, //0x50,	//	"HEX=80 DEC=50" WTF?!			-------(????)
+ 263:main.c        **** 
+ 264:main.c        **** #define H_IMAGE_SIZE_CM ((H_IMAGE_SIZE_MM+5L)/10L)
+ 265:main.c        **** #if (H_IMAGE_SIZE_CM > 255)
+ 266:main.c        ****  #error "H_IMAGE_SIZE_CM is too large!"
+ 267:main.c        **** #endif
+ 268:main.c        **** 	//Max H image size (cm rounded)
+ 269:main.c        **** 	[0x15]=	((uint8_t)H_IMAGE_SIZE_CM), //25,	//				25cm
+ 270:main.c        **** 
+ 271:main.c        **** 	//Max V image size (rounded)
+ 272:main.c        **** 	[0x16]=	18,	//				18cm
+ 273:main.c        **** 
+ 274:main.c        **** 	//Display Gamma
+ 275:main.c        **** 	// = (gamma * 100)-100
+ 276:main.c        **** 	// e.g. (2.2*100)-100=120 (SPWG)
+ 277:main.c        **** 	[0x17]=	120,	//0x78=2.2	Gamma curve = 2.2
+ 278:main.c        **** 
+ 279:main.c        **** 	//Feature Support
+ 280:main.c        **** 	// SPWG: "no DPMS, Active Off, RGB, timing BLK 1 == 0x0A"
+ 281:main.c        **** 	// ????
+ 282:main.c        **** 	// Bits 7-5: standby, suspend, active-off
+ 283:main.c        **** 	// Bit 4-3: Display Type (b4=0, b3=1: RGB)
+ 284:main.c        **** 	// Bit 2: colorspace
+ 285:main.c        **** 	// Bit 1: Preferred Timing Mode
+ 286:main.c        **** 	//        "If this bit is set to 1, the display's preferred timing mode
+ 287:main.c        **** 	//         is indicated in the first detailed timing block.
+ 288:main.c        **** 	//         NOTE: Use of the preferred timing mode is required by
+ 289:main.c        **** 	//         EDID Structure version 1 Revision 3 and higher."
+ 290:main.c        **** 	// Bit 0: 0=GTF timings not supported
+ 291:main.c        **** 	[0x18]=	0x0A, //234,	//0xEA		RGB display, Preferred Timing Mode
+ 292:main.c        **** 	
+ 293:main.c        **** 
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 8
+
+
+ 294:main.c        **** 
+ 295:main.c        **** //Panel Color Coordinates
+ 296:main.c        **** 	//Red/Green low bits (RxRy/GxGy)
+ 297:main.c        **** 	[0x19]=	175,	//0xAF		--- Red/Green Low Bits
+ 298:main.c        **** 	//Blue/White low bits (BxBy/WxWy)
+ 299:main.c        **** 	[0x1A]=	64,	//0x40		--- Blue/White low bits
+ 300:main.c        **** 
+ 301:main.c        **** 	// Below:
+ 302:main.c        **** 	//  R/G/B/Wx = 0.xxx
+ 303:main.c        **** 	//  R/G/B/Wy = 0.xxx
+ 304:main.c        **** 	[0x1B]=	0x95,	// Red x high bits 95 149 0.584 
+ 305:main.c        **** 						// Red (x) = 10010101 (0.584) 
+ 306:main.c        **** 	[0x1C]=	0x56,	// Red y high bits 56 86 0.338 
+ 307:main.c        **** 						// Red (y) = 01010110 (0.338) 
+ 308:main.c        **** 	[0x1D]=	0x4A,	// Green x high bits 4A 74 0.292 
+ 309:main.c        **** 						// Green (x) = 01001010 (0.292) 
+ 310:main.c        **** 	[0x1E]=	0x8F,	// Green y high bits 8F 143 0.562 
+ 311:main.c        **** 						// Green (y) = 10001111 (0.562) 
+ 312:main.c        **** 	[0x1F]=	0x25,	// Blue x high bits 25 37 0.146 
+ 313:main.c        **** 						// Blue (x) = 00100101 (0.146) 
+ 314:main.c        **** 	[0x20]=	0x20,	// BLue y high bits 20 32 0.125 
+ 315:main.c        **** 						// Blue (y) = 00100000 (0.125) 
+ 316:main.c        **** 	[0x21]=	0x50,	// White x high bits 50 80 0.313 
+ 317:main.c        **** 						// White (x) = 01010000 (0.313) 
+ 318:main.c        **** 	[0x22]=	0x54,	// White y high bits 54 84 0.329 
+ 319:main.c        **** 						// White (y) = 01010100 (0.329) 
+ 320:main.c        **** 
+ 321:main.c        **** 
+ 322:main.c        **** //Established Timings
+ 323:main.c        **** 	// SPWG suggests 0x00 for all three: "not used"
+ 324:main.c        **** 	// "Also, if any one-bit flag is not set in the Established Timing 
+ 325:main.c        **** 	//  block, this data can not be used to determine if that timing is
+ 326:main.c        ****   	//  within the supported scanning frequency of the display - 
+ 327:main.c        **** 	//  only that it is not a Factory Supported Mode."
+ 328:main.c        **** 	// "Factory Supported Modes are defined as modes that are properly 
+ 329:main.c        **** 	//  sized and centered as the monitor is delivered from factory."
+ 330:main.c        **** 	// IOW: 0's is fine.
+ 331:main.c        **** 	//Established Timings I
+ 332:main.c        **** 	[0x23]=	0x00, //0x21,	// Established timing 1 21 33 ----
+ 333:main.c        **** 						// Bit 5: 640x480 @ 60Hz
+ 334:main.c        **** 						// Bit 0: 800x600 @ 60Hz
+ 335:main.c        **** 	//Established Timings II
+ 336:main.c        **** 	[0x24]=	0x00, //0x08,	// Established timing 2 08 8 ----
+ 337:main.c        **** 						// Bit 3: 1024x768 @ 60Hz
+ 338:main.c        **** 	//Established Timings III / Manufacturer's Timings
+ 339:main.c        **** 	// "Bits 6 → 0 (inclusive) of byte 3 are used to define manufacturer’s
+ 340:main.c        ****   	//  proprietary timings, and may be used if a manufacturer wants to 
+ 341:main.c        **** 	//  identify such timings through the use of one-bit flags."
+ 342:main.c        **** 	// NOT required, and not recommended.
+ 343:main.c        **** 	[0x25]=	0x00,	// Established timing 3 00 0 ----
+ 344:main.c        **** 
+ 345:main.c        **** //Standard Timing ID (SPWG suggests all = 0x01: "not used"
+ 346:main.c        **** 	//Standard Timing #1
+ 347:main.c        **** 	// These values don't make any sense! (from HV121 spec)
+ 348:main.c        **** 	// iBook LTN display lists none
+ 349:main.c        **** 	//[0x26]=	0x81,	// 81 129    HV121:"Not Used"
+ 350:main.c        **** 	//[0x27]=	0x80,	// 80 128 
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 9
+
+
+ 351:main.c        **** 	[0x26 ... 0x27]= 0x01, //Not Used
+ 352:main.c        **** 
+ 353:main.c        **** 	//Standard Timings #2-8 "Not Used"
+ 354:main.c        **** 	// (Each is a pair of bytes, as Timing #1 above)
+ 355:main.c        **** 	[0x28 ... 0x35]=	0x01,	// 01 1 
+ 356:main.c        **** 
+ 357:main.c        **** //Detailed Timing/Monitor Descriptor #1 (60Hz)
+ 358:main.c        **** //"The first descriptor block shall be used to indicate the display's 
+ 359:main.c        **** // preferred timing mode"
+ 360:main.c        **** 	// SPWG: Pixel Clock / 10,000
+ 361:main.c        **** 	//[0x36]=	0x20,	// LSB 84.80 MHz Main Clock
+ 362:main.c        **** 	//[0x37]=	0x21,	// MSB
+ 363:main.c        **** 	//LTD121: 51-57MHz 54typ
+ 364:main.c        **** 	// WORKING WITH IT DIRECTLY HERE...
+ 365:main.c        **** 	// (dual-pixel mode, with second pixel blank)
+ 366:main.c        **** 
+ 367:main.c        **** 	//This is per EDID standard:
+ 368:main.c        ****   #define CLK_SCALE   (10000L)
+ 369:main.c        **** 
+ 370:main.c        **** 	[0x36]=	((PIX_CLK/CLK_SCALE)&0xff),
+ 371:main.c        **** 	[0x37]=	((PIX_CLK/CLK_SCALE)>>8),
+ 372:main.c        **** 	// Horizontal
+ 373:main.c        **** 	//0x578 = 1400, 0x0C8 = 200
+ 374:main.c        **** 	// SPWG Note 2:
+ 375:main.c        **** 	// "HA, byte 38h, is true active pixels"
+ 376:main.c        **** 	// "HA_pixClks, bytes 55/56, is HA for XGA 
+ 377:main.c        **** 	//  and HA/2 for WSXGA+ and above resolutions" this seems to be in error
+ 378:main.c        **** 	//[0x38]=	0x78, //120, //0x78	Hor Active = 1400 lower 8bits
+ 379:main.c        **** 	//[0x39]=	0xC8, //200, //0xC8	Hor Blanking = 200 lower 8bits (Thbp)
+ 380:main.c        **** 	//[0x3A]=	((0x05<<4) | (0x00)),	//0x50 80
+ 381:main.c        **** 
+ 382:main.c        **** 	//4bits Hor Active + 4bits Hor Blanking upper4:4bits
+ 383:main.c        **** 	// In pixel-clocks
+ 384:main.c        **** 	[0x38]=	((H_ACTIVE)&0xff),
+ 385:main.c        **** 	[0x39]=	((H_BLANKING)&0xff),
+ 386:main.c        **** 	[0x3A]=	(((H_ACTIVE)&0xf00)>>4) | (((H_BLANKING)&0xf00)>>8),
+ 387:main.c        **** 
+ 388:main.c        **** 
+ 389:main.c        **** //#warning "LTD-DIRECT"
+ 390:main.c        **** // In lines
+ 391:main.c        **** #define V_ACTIVE		(V_ACTIVE_GPU) //1050
+ 392:main.c        **** #define V_BLANKING_TYP	(V_FP_GPU+V_WIDTH_GPU+V_BP_GPU) //16
+ 393:main.c        **** #define V_BLANKING (V_BLANKING_TYP)
+ 394:main.c        **** 	// Vertical
+ 395:main.c        **** 	//0x41A = 1050, 0x00A = 10
+ 396:main.c        **** 	//[0x3B]=	0x1A,	//26	Ver Active = 1050
+ 397:main.c        **** 	//[0x3C]=	0x0A, //10	Ver Blanking = 10 (Tvbp)
+ 398:main.c        **** 						// SPWG: "DE Blanking typ. For DE only panels" ???
+ 399:main.c        **** 	//[0x3D]=	((0x04<<4) | (0x00)),	//0x40 64
+ 400:main.c        **** 						//4bits Ver Active + 4bits Ver Blanking
+ 401:main.c        **** 	[0x3B]=  ((V_ACTIVE)&0xff),
+ 402:main.c        **** 	[0x3C]=  ((V_BLANKING)&0xff),
+ 403:main.c        **** 	[0x3D]=  (((V_ACTIVE)&0xf00)>>4) | (((V_BLANKING)&0xf00)>>8),
+ 404:main.c        **** 
+ 405:main.c        **** 
+ 406:main.c        **** 	//[0x3E]=	20,	//Hor Sync Offset = 20 pixels (Thfp)
+ 407:main.c        **** 						//"Pixels, from blanking starts, lower 8 bits"
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 10
+
+
+ 408:main.c        **** 	[0x3E]= ((THFP)&0xff),
+ 409:main.c        **** 
+ 410:main.c        **** 	//[0x3F]=	116,	//Hor Sync Pulse Width = 116 pixels
+ 411:main.c        **** 	[0x3F]= ((THW)&0xff),
+ 412:main.c        **** 
+ 413:main.c        **** 	//Vertical Sync Offset (TVFP)
+ 414:main.c        **** //#define TVFP_MIN	(V_FP_GPU) //0
+ 415:main.c        **** #define TVFP	(V_FP_GPU) //(TVFP_MIN + 2)
+ 416:main.c        **** 	//Vertical Sync Pulse Width
+ 417:main.c        **** //#define TVW_MIN	(V_WIDTH_GPU) //2
+ 418:main.c        **** #define TVW	(V_WIDTH_GPU) //(TVW_MIN*2)
+ 419:main.c        **** 	// HV121 spec seems to be misleading... should be (?)
+ 420:main.c        **** 	// [0x40]=((Voff&0x0f)<<4) | (Vpw&0x0f)
+ 421:main.c        **** 	// [0x41]=((Voff&0x30)<<6) | ((Vpw&0x30)<<4) 
+ 422:main.c        **** 	//        | (Hpw&0x300)>>6) | ((Hoff&0x300)>>8) --ish
+ 423:main.c        **** //	[0x40]=	37,	//0x25	2	Vert Sync Offset = 2 lines  ??? (Tvfp)
+ 424:main.c        **** 						//SPWG: "Offset=xx lines    Sync Width=xx lines"
+ 425:main.c        **** 	[0x40]=	(((TVFP)&0x0f)<<4) | ((TVW)&0x0f),
+ 426:main.c        **** 
+ 427:main.c        **** //	[0x41]=	0,		//0x00	5	Vert Sync Pulse Width = 5 lines
+ 428:main.c        **** 						//SPWG: "Horiz Vert Sync Offset/Width upper 2 bits"
+ 429:main.c        **** 
+ 430:main.c        **** #if( ((THFP)&0xffffff00) | ((THW)&0xffffff00) \
+ 431:main.c        **** 		| ((TVFP)&0xfffffff0) | ((TVW)&0xfffffff0) )
+ 432:main.c        **** 	#error "Byte 0x41 (HSYNC/VSYNC Offset/Pulsewidth upper bits NYI"
+ 433:main.c        **** #endif
+ 434:main.c        **** 
+ 435:main.c        **** 	[0x41]=	0,
+ 436:main.c        **** 
+ 437:main.c        **** 	[0x42]=	H_IMAGE_SIZE_MM,
+ 438:main.c        **** 	[0x43]=	0xB8,	//Vertical Image Size = 184mm (low 8 bits)
+ 439:main.c        **** 	[0x44]=	0x00,	// 4 bits of Hor Image Size + 4 bits of Ver Image Size
+ 440:main.c        **** 	[0x45]=	0x00,	//Horizontal Border = 0 pixels
+ 441:main.c        **** 	[0x46]=	0x00,	//Vertical Border = 0 lines
+ 442:main.c        **** 
+ 443:main.c        **** 	//Flags (bits 6,5,4,3 repurpose other bits! Don't change)
+ 444:main.c        **** 	// Bit7:		0=Non-Interlaced
+ 445:main.c        **** 	// Bit6,5:	00=non-stereo
+ 446:main.c        **** 	// Bit4,3:	11=Digital Separate (as opposed to composite)
+ 447:main.c        **** 	// Bit2:		Vertical Polarity: 1=Vsync is positive
+ 448:main.c        **** 	// Bit1:		Horizontal Polarity: 1=Hsync is positive
+ 449:main.c        **** 	// Bit0:		x (don't care, when non-stereo) E-EDID WTF See below, SPWG:
+ 450:main.c        **** 	//[0x47]=	0x19,	// ----- ????
+ 451:main.c        **** 						// SPWG: "Non-interlaced, Normal, no stereo, Separate
+ 452:main.c        **** 						//        sync, H/V pol Negatives" = 18
+ 453:main.c        **** 						//       "DE only note: LSB is set to '1' if panel is
+ 454:main.c        **** 						//        DE-timing only. H/V can be ignored" = 19
+ 455:main.c        **** 						// Indeed: HV121 specs seem to be DE-only
+ 456:main.c        **** 						//        "Features: Data enable signal mode"
+ 457:main.c        **** 						//        Also, timing diagrams do not show H/V
+ 458:main.c        **** 	[0x47]=	0x18,
+ 459:main.c        **** 
+ 460:main.c        **** 
+ 461:main.c        **** //E-EDID:
+ 462:main.c        **** //Notes regarding EDID Monitor Range Limits Descriptor:
+ 463:main.c        **** //		Use of this descriptor is mandatory. 
+ 464:main.c        **** //		Any timing outside these limits may cause the monitor to enter a 
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 11
+
+
+ 465:main.c        **** //		self-protection mode. The host shall always verify that an intended 
+ 466:main.c        **** //		timing falls within these limits before the timing is applied.
+ 467:main.c        **** // My Notes:
+ 468:main.c        **** //  This does not seem to be implemented in any of the displays 
+ 469:main.c        **** //  I've checked.
+ 470:main.c        **** //  Nor is it mentioned in SPWG
+ 471:main.c        **** //But E-EDID mentions it twice!
+ 472:main.c        **** // 1) All blocks shall be filled with valid data using the formats
+ 473:main.c        **** //		described in sections 3.10.2 and 3.10.3.  Use of a data 
+ 474:main.c        **** //		fill pattern is not permitted. 
+ 475:main.c        **** // 2) Timing data must represent a supported mode of the display. 
+ 476:main.c        **** //	3) Descriptor blocks shall be ordered such that all detailed timing
+ 477:main.c        **** //		blocks precede other  types of descriptor blocks 
+ 478:main.c        **** //	4) The first descriptor block shall be used to indicate the display's
+ 479:main.c        **** //		preferred timing mode.  This is described in section 3.10.1 
+ 480:main.c        **** //	5) A Monitor Range Limits Descriptor must be provided 
+ 481:main.c        **** //	6) A Monitor Name Descriptor must be provided 
+ 482:main.c        **** //Note:  Items 4, 5 and 6 above were permitted but not required prior to 
+ 483:main.c        **** //		EDID structure version 1 revision 3.  Hosts may encounter displays 
+ 484:main.c        **** //		using EDID version 1 revision 0-2 which do not meet all of these 
+ 485:main.c        **** //		requirements.
+ 486:main.c        **** // Yeah, but All the screens I've checked report to be EDID V1R3...
+ 487:main.c        **** 
+ 488:main.c        **** 
+ 489:main.c        **** 
+ 490:main.c        **** // Detailed timing/monitor descriptor #2 Alternative Panel Timing 
+ 491:main.c        **** 	// SPWG: "Timing Descriptor #2 may be used for timings other than 60Hz"
+ 492:main.c        **** 	// HV121: (dummy)
+ 493:main.c        **** 	//SPWG shows Timing Descriptor #2 as identically-formatted to #1
+ 494:main.c        **** 	// With the exception of the last byte...
+ 495:main.c        **** 	//  byte 0x59 "Module 'A' Revision = Example 00, 01, 02, 03, etc."
+ 496:main.c        **** 	// (isn't the info from Timing1's last byte necessary here too?!)
+ 497:main.c        **** 	[0x48 ... 0x4A] = 0,
+ 498:main.c        **** 	[0x4B]=	0x10,	// Dummy Descriptor
+ 499:main.c        **** 	[0x4C ... 0x59] = 0,
+ 500:main.c        **** 
+ 501:main.c        **** // Detailed timing/monitor descriptor #3
+ 502:main.c        **** 	//SPWG: Shows #3 as same-format as HV121's #4
+ 503:main.c        **** 	// SPWG notes placed there
+ 504:main.c        **** 	// SPWG apparently doesn't have a descriptor matching this one...
+ 505:main.c        **** 	//[0x5A ... 0x5C] = 0,	//SPWG: "Flag" (all 0)
+ 506:main.c        **** 	//[0x5D]=	0x0F,	//Manufacturer Specified
+ 507:main.c        **** 						//  SPWG: Dummy Descriptor=0xFE
+ 508:main.c        **** 	//[0x5E]=	0x00,	//
+ 509:main.c        **** 	//[0x5F]=	144,	//1440
+ 510:main.c        **** 	//[0x60]=	0x43,	//4:3
+ 511:main.c        **** 	//[0x61]=	50,	//50Hz
+ 512:main.c        **** 	//[0x62 ... 0x64] = 0,	//"Not Supported"
+ 513:main.c        **** 	//[0x65]=	19,	//190 (what?)
+ 514:main.c        **** 	//[0x66]=	2,		//FFS (what??)
+ 515:main.c        **** 	//[0x67]=	0,		//"Reserved"
+ 516:main.c        **** 	// BOE ???
+ 517:main.c        **** 	//[0x68]=	0x09,
+ 518:main.c        **** 	//[0x69]=	0xE5,	
+ 519:main.c        **** 	//[0x6A ... 0x6B] = 0,
+ 520:main.c        **** 
+ 521:main.c        **** 	//Adding another Dummy Descriptor:
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 12
+
+
+ 522:main.c        **** 	[0x5A ... 0x5C] = 0,
+ 523:main.c        **** 	[0x5D] = 0x10,
+ 524:main.c        **** 	[0x5E ... 0x6B] = 0,
+ 525:main.c        **** 
+ 526:main.c        **** // Detailed timing/monitor descriptor #4
+ 527:main.c        **** 	// Product Name Tag (ASCII)
+ 528:main.c        **** 	[0x6C ... 0x6E] = 0x00,	//SPWG: "Flag"
+ 529:main.c        **** 	[0x6F]= 0xFC,	//Let's make this a monitor-name instead of ASCII Data	
+ 530:main.c        **** 			//0xFE,				//SPWG: "Dummy Descriptor" NOT: FE = ASCII Data
+ 531:main.c        **** 	[0x70]=	0x00,				//SPWG: "Flag"
+ 532:main.c        **** 
+ 533:main.c        **** 	// Model Name: mehLTD121KM7K //HV121P01-101
+ 534:main.c        **** 	[0x71]=	'm', //'H',				//SPWG: PC Maker P/N 1st Character
+ 535:main.c        **** 	[0x72]=	'e', //'V',				//SPWG: PC Maker P/N 2nd Character
+ 536:main.c        **** 	[0x73]=	'h', //'1',				//SPWG: PC Maker P/N 3rd Character
+ 537:main.c        **** 	[0x74]=	'L', //'2',				//SPWG: PC Maker P/N 4th Character
+ 538:main.c        **** 	[0x75]=	'T', //'1',				//SPWG: PC Maker P/N 5th Character
+ 539:main.c        **** 	[0x76]=	'D', //'P',				//SPWG: LCD Supplier Revision #
+ 540:main.c        **** 	[0x77]=	'1', //'0',				//SPWG: Manufacturer P/N
+ 541:main.c        **** 	[0x78]=	'2', //'1',				//SPWG: Manufacturer P/N
+ 542:main.c        **** 	[0x79]=	'1', //'-',				//SPWG: Manufacturer P/N
+ 543:main.c        **** 	[0x7A]=	'K', //'1',				//SPWG: Manufacturer P/N
+ 544:main.c        **** 	[0x7B]=	'M', //'0',				//SPWG: Manufacturer P/N
+ 545:main.c        **** 	[0x7C]=	'7', //'1',				//SPWG: Manufacturer P/N
+ 546:main.c        **** 	[0x7D]=	'K', //0x0A,				//SPWG: Manufacturer P/N
+ 547:main.c        **** 									//SPWG: "(if <13 char, terminate with ASCII
+ 548:main.c        **** 									//       code 0Ah, set remaining char = 20h"
+ 549:main.c        **** 									// Apparently referring to ALL characters
+ 550:main.c        **** 									//   0x71-0x7D
+ 551:main.c        **** 
+ 552:main.c        **** 	//SPWG Timing Descriptor #4:
+ 553:main.c        **** 	//0x6C-6E	0x00	Flag
+ 554:main.c        **** 	//0x6F		0xFE	Data Type Tag
+ 555:main.c        **** 	//0x70		0x00	Flag
+ 556:main.c        **** 	//0x71-75	XX		SMBUS Value = XX nits
+ 557:main.c        **** 	//0x76-77	XXX	SMBUS Value = XXX nits
+ 558:main.c        **** 	//0x78		XXX	SMBUS Value = max nits (Typically 00h, XXX nits)
+ 559:main.c        **** 	//0x79		1/2	Number of LVDS channels (1 or 2)
+ 560:main.c        **** 	//0x7A		0/1	Panel Self Test (00-not present, 01-present)
+ 561:main.c        **** 	//0x7B      0Ah	(less than 13 char, so terminate)
+ 562:main.c        **** 	//0x7C-7D	20h	(remaining characters, terminated above)
+ 563:main.c        **** 
+ 564:main.c        **** //The End.
+ 565:main.c        **** 	[0x7E]=	0,		//"Extension Flag"
+ 566:main.c        **** 						//SPWG: "Number of optional 128 panel ID extension blocks
+ 567:main.c        **** 						//      to follow, Typ=0"
+ 568:main.c        **** 	[0x7F]=	0x75	// CHECKSUM
+ 569:main.c        **** 						//SPWG: "The 1-byte sum of all 128 bytes in this panel
+ 570:main.c        **** 						//       ID block shall = 0"
+ 571:main.c        **** };
+ 572:main.c        **** 
+ 573:main.c        **** 
+ 574:main.c        **** uint8_t edidArrayIndex = 0;
+ 575:main.c        **** //Called immediately by the i2c interrupts when a byte is received
+ 576:main.c        **** static __inline__
+ 577:main.c        **** void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
+ 578:main.c        **** 	__attribute__((__always_inline__));
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 13
+
+
+ 579:main.c        **** //Called immediately by the i2c interrupts when a byte is to be loaded
+ 580:main.c        **** // for transmission
+ 581:main.c        **** static __inline__
+ 582:main.c        **** uint8_t nextByteToTransmit(uint8_t masterACKed)
+ 583:main.c        **** 	__attribute__((__always_inline__));;
+ 584:main.c        **** 
+ 585:main.c        **** 
+ 586:main.c        **** 
+ 587:main.c        **** 
+ 588:main.c        **** #define USICNT_MASK ((1<<USICNT3)|(1<<USICNT2)|(1<<USICNT1)|(1<<USICNT0))
+ 589:main.c        **** // There are four basic states: 
+ 590:main.c        **** //    Awaiting Start Condition
+ 591:main.c        **** //    ACK Transmission
+ 592:main.c        **** //		Address
+ 593:main.c        **** //    Data (read/write)
+ 594:main.c        **** // AWAITING values are set... others are read... (helps for readability)
+ 595:main.c        **** #define USI_STATE_AWAITING_START		0
+ 596:main.c        **** #define USI_STATE_AWAITING_START_SCL 1
+ 597:main.c        **** #define USI_STATE_START_SCL_RECEIVED USI_STATE_AWAITING_START_SCL
+ 598:main.c        **** #define USI_STATE_AWAITING_ADDRESS	2
+ 599:main.c        **** #define USI_STATE_ADDRESS_RECEIVED 	USI_STATE_AWAITING_ADDRESS	
+ 600:main.c        **** #define USI_STATE_AWAITING_ACK		3
+ 601:main.c        **** #define USI_STATE_ACK_COMPLETE		USI_STATE_AWAITING_ACK
+ 602:main.c        **** #define USI_STATE_AWAITING_BYTE	   4
+ 603:main.c        **** #define USI_STATE_BYTE_COMPLETE		USI_STATE_AWAITING_BYTE
+ 604:main.c        **** 
+ 605:main.c        **** //uint8_t usi_i2c_deviceAddressReceived = FALSE;
+ 606:main.c        **** uint8_t usi_i2c_byteToTransmit = 0xff; //0xA5;
+ 607:main.c        **** uint8_t usi_i2c_state = USI_STATE_AWAITING_START;
+ 608:main.c        **** uint8_t usi_i2c_readFromSlave = 0;
+ 609:main.c        **** uint8_t usi_i2c_requestedAddres = 0;
+ 610:main.c        **** uint8_t usi_i2c_receivedByte = 0;
+ 611:main.c        **** 
+ 612:main.c        **** #define SDA_PIN	PB0
+ 613:main.c        **** #define SCL_PIN	PB2
+ 614:main.c        **** #define SDAPORT	PORTB
+ 615:main.c        **** #define SCLPORT	PORTB
+ 616:main.c        **** 
+ 617:main.c        **** // This can be called in two cases:
+ 618:main.c        **** //   upon INIT
+ 619:main.c        **** //   and when a different slave has been addressed
+ 620:main.c        **** //      from an overflow interrupt
+ 621:main.c        **** void usi_i2c_awaitStart(void)
+ 622:main.c        **** {
+ 107               		.stabn	68,0,622,.LM0-.LFBB1
+ 108               	.LM0:
+ 109               	.LFBB1:
+ 110               	/* prologue: function */
+ 111               	/* frame size = 0 */
+ 623:main.c        **** 	usi_i2c_state = USI_STATE_AWAITING_START;
+ 112               		.stabn	68,0,623,.LM1-.LFBB1
+ 113               	.LM1:
+ 114 0000 1092 0000 		sts usi_i2c_state,__zero_reg__
+ 624:main.c        **** 
+ 625:main.c        ****    //Clear the interrupt flags, etc. first...
+ 626:main.c        **** 	// NOTE This will release SCL hold (i.e. different slave addressed)
+ 627:main.c        ****    USISR = (1<<USISIF) //Start Condition Interrupt Flag
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 14
+
+
+ 115               		.stabn	68,0,627,.LM2-.LFBB1
+ 116               	.LM2:
+ 117 0004 80EE      		ldi r24,lo8(-32)
+ 118 0006 8EB9      		out 46-0x20,r24
+ 628:main.c        ****                        //  (ONLY cleared when written 1)
+ 629:main.c        ****          | (1<<USIOIF) //Counter Overflow Interrupt Flag
+ 630:main.c        ****                        //  (ONLY cleared when written 1)
+ 631:main.c        ****          | (1<<USIPF)  //Stop Condition Flag (not an interrupt)
+ 632:main.c        ****          | (0<<USIDC)  //Data Collision Flag (Read-Only, not an interrupt)
+ 633:main.c        ****          | (USICNT_MASK & 0); //Clear the USI counter
+ 634:main.c        **** 
+ 635:main.c        **** 
+ 636:main.c        ****    //Configure the USI to look for Start-Condition
+ 637:main.c        ****    USICR = (1<<USISIE) //Enable the start-condition interrupt
+ 119               		.stabn	68,0,637,.LM3-.LFBB1
+ 120               	.LM3:
+ 121 0008 88EA      		ldi r24,lo8(-88)
+ 122 000a 8DB9      		out 45-0x20,r24
+ 638:main.c        ****          | (0<<USIOIE) //Disable the counter-overflow interrupt
+ 639:main.c        ****          | (1<<USIWM1) //Enable two-wire mode 
+ 640:main.c        **** 							  // with SCL hold during start-condition
+ 641:main.c        ****          | (0<<USIWM0) // without SCL hold during overflow
+ 642:main.c        **** 							  // will be set later
+ 643:main.c        ****          | (1<<USICS1) //Select external clocking
+ 644:main.c        ****          | (0<<USICS0) //  positive-edge
+ 645:main.c        ****          | (0<<USICLK) //  4-bit counter counts on both external edges
+ 646:main.c        ****          | (0<<USITC); // DON'T toggle the clock pin 
+ 647:main.c        ****                        // (this should always be 0)
+ 648:main.c        **** 
+ 649:main.c        **** 	setpinPORT(SDA_PIN, SDAPORT);
+ 123               		.stabn	68,0,649,.LM4-.LFBB1
+ 124               	.LM4:
+ 125 000c C09A      		sbi 56-0x20,0
+ 650:main.c        **** 	setpinPORT(SCL_PIN, SCLPORT);
+ 126               		.stabn	68,0,650,.LM5-.LFBB1
+ 127               	.LM5:
+ 128 000e C29A      		sbi 56-0x20,2
+ 651:main.c        **** 
+ 652:main.c        **** 	setinPORT(SDA_PIN, SDAPORT);
+ 129               		.stabn	68,0,652,.LM6-.LFBB1
+ 130               	.LM6:
+ 131 0010 B898      		cbi 55-0x20,0
+ 653:main.c        **** 	//Enable SCL-hold during the start-condition 
+ 654:main.c        **** 	setoutPORT(SCL_PIN, SCLPORT);
+ 132               		.stabn	68,0,654,.LM7-.LFBB1
+ 133               	.LM7:
+ 134 0012 BA9A      		sbi 55-0x20,2
+ 135               	/* epilogue start */
+ 655:main.c        **** }
+ 136               		.stabn	68,0,655,.LM8-.LFBB1
+ 137               	.LM8:
+ 138 0014 0895      		ret
+ 139               		.size	usi_i2c_awaitStart, .-usi_i2c_awaitStart
+ 140               	.Lscope1:
+ 141               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 142               		.stabd	78,0,0
+ 143               		.stabs	"usi_i2c_awaitStartSCL:F(0,15)",36,0,668,usi_i2c_awaitStartSCL
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 15
+
+
+ 144               	.global	usi_i2c_awaitStartSCL
+ 145               		.type	usi_i2c_awaitStartSCL, @function
+ 146               	usi_i2c_awaitStartSCL:
+ 147               		.stabd	46,0,0
+ 656:main.c        **** 
+ 657:main.c        **** 
+ 658:main.c        **** 
+ 659:main.c        **** //Initialize the counter to count
+ 660:main.c        **** //Clear the counter-overflow flag to
+ 661:main.c        **** //Release SCL
+ 662:main.c        **** // 16 clock edges will signal 8 bits received (count=0)
+ 663:main.c        **** // 2 clock edges will signal ACK transmitted (count=14)
+ 664:main.c        **** #define USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(count) \
+ 665:main.c        ****    (USISR = ((1<<USIOIF) | (USICNT_MASK & (count))))
+ 666:main.c        **** 
+ 667:main.c        **** //This is called after a start-condition
+ 668:main.c        **** void usi_i2c_awaitStartSCL(void)
+ 669:main.c        **** {
+ 148               		.stabn	68,0,669,.LM9-.LFBB2
+ 149               	.LM9:
+ 150               	.LFBB2:
+ 151               	/* prologue: function */
+ 152               	/* frame size = 0 */
+ 670:main.c        **** 	usi_i2c_state = USI_STATE_AWAITING_START_SCL;
+ 153               		.stabn	68,0,670,.LM10-.LFBB2
+ 154               	.LM10:
+ 155 0016 81E0      		ldi r24,lo8(1)
+ 156 0018 8093 0000 		sts usi_i2c_state,r24
+ 671:main.c        **** 
+ 672:main.c        **** 	//Before enabling the counter-overflow interrupt
+ 673:main.c        **** 	// make sure the flag is clear
+ 674:main.c        **** 	// this will also clear the counter... watch out!
+ 675:main.c        **** 	USISR = (1<<USIOIF);
+ 157               		.stabn	68,0,675,.LM11-.LFBB2
+ 158               	.LM11:
+ 159 001c 80E4      		ldi r24,lo8(64)
+ 160 001e 8EB9      		out 46-0x20,r24
+ 676:main.c        **** 
+ 677:main.c        ****    //Configure the USI to look for counter-overflow (start SCL received)
+ 678:main.c        ****    USICR = (1<<USISIE) //Enable the start-condition interrupt
+ 161               		.stabn	68,0,678,.LM12-.LFBB2
+ 162               	.LM12:
+ 163 0020 88EF      		ldi r24,lo8(-8)
+ 164 0022 8DB9      		out 45-0x20,r24
+ 679:main.c        ****          | (1<<USIOIE) //Enable the counter-overflow interrupt
+ 680:main.c        ****                        // WE'RE READY!!!
+ 681:main.c        ****          | (1<<USIWM1) //Enable two-wire mode
+ 682:main.c        ****          | (1<<USIWM0) // with SCL hold during overflow
+ 683:main.c        ****          | (1<<USICS1) //Select external clocking
+ 684:main.c        ****          | (0<<USICS0) //  positive-edge
+ 685:main.c        ****          | (0<<USICLK) //  4-bit counter counts on both external edges
+ 686:main.c        ****          | (0<<USITC); // DON'T toggle the clock pin 
+ 687:main.c        ****                        // (this should always be 0)
+ 688:main.c        **** 
+ 689:main.c        **** 	//Don't clear the USISIF, SCL should be released AFTER it's received!
+ 690:main.c        **** 	// ONE SCL change (high to low) should be counted before we're
+ 691:main.c        **** 	//   before we're ready for 16 edges signalling address+r/w received
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 16
+
+
+ 692:main.c        **** 	//APPARENTLY the USI_START_vect ISR is called until USISIF is cleared
+ 693:main.c        **** 	// Unless the start-SCL occurs before the overflow interrupt is enabled
+ 694:main.c        **** 	//  this should have the same effect (the overflow interrupt stalls SCL)
+ 695:main.c        **** 	// However, if the start-SCL is too fast to detect, then we're screwed
+ 696:main.c        **** 	// all of, what, an interrupt-jump and a few instructions?
+ 697:main.c        **** 	//  Maybe revisit the zipped version (using a while loop instead of
+ 698:main.c        **** 	//   states)
+ 699:main.c        **** 	// also inline this function...
+ 700:main.c        **** 	USISR = (1<<USISIF) | (USICNT_MASK & 15);
+ 165               		.stabn	68,0,700,.LM13-.LFBB2
+ 166               	.LM13:
+ 167 0024 8FE8      		ldi r24,lo8(-113)
+ 168 0026 8EB9      		out 46-0x20,r24
+ 169               	/* epilogue start */
+ 701:main.c        **** 	
+ 702:main.c        **** //	USISR = (USICNT_MASK & 15);
+ 703:main.c        **** //	static uint8_t callCount = 0;
+ 704:main.c        **** //	if(callCount < 15)
+ 705:main.c        **** //		callCount++;
+ 706:main.c        **** //	set_heartBlink(callCount);
+ 707:main.c        **** }
+ 170               		.stabn	68,0,707,.LM14-.LFBB2
+ 171               	.LM14:
+ 172 0028 0895      		ret
+ 173               		.size	usi_i2c_awaitStartSCL, .-usi_i2c_awaitStartSCL
+ 174               	.Lscope2:
+ 175               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 176               		.stabd	78,0,0
+ 177               		.stabs	"usi_i2c_slaveInit:F(0,15)",36,0,711,usi_i2c_slaveInit
+ 178               	.global	usi_i2c_slaveInit
+ 179               		.type	usi_i2c_slaveInit, @function
+ 180               	usi_i2c_slaveInit:
+ 181               		.stabd	46,0,0
+ 708:main.c        **** 
+ 709:main.c        **** 
+ 710:main.c        **** 
+ 711:main.c        **** void usi_i2c_slaveInit(void)
+ 712:main.c        **** {
+ 182               		.stabn	68,0,712,.LM15-.LFBB3
+ 183               	.LM15:
+ 184               	.LFBB3:
+ 185               	/* prologue: function */
+ 186               	/* frame size = 0 */
+ 713:main.c        **** 	usi_i2c_awaitStart();
+ 187               		.stabn	68,0,713,.LM16-.LFBB3
+ 188               	.LM16:
+ 189 002a 00D0      		rcall usi_i2c_awaitStart
+ 190               	/* epilogue start */
+ 714:main.c        **** }
+ 191               		.stabn	68,0,714,.LM17-.LFBB3
+ 192               	.LM17:
+ 193 002c 0895      		ret
+ 194               		.size	usi_i2c_slaveInit, .-usi_i2c_slaveInit
+ 195               	.Lscope3:
+ 196               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 197               		.stabd	78,0,0
+ 198               		.stabs	"__vector_13:F(0,15)",36,0,718,__vector_13
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 17
+
+
+ 199               	.global	__vector_13
+ 200               		.type	__vector_13, @function
+ 201               	__vector_13:
+ 202               		.stabd	46,0,0
+ 715:main.c        **** 
+ 716:main.c        **** uint8_t heartBlinkInternal = 0;
+ 717:main.c        **** 
+ 718:main.c        **** ISR(USI_START_vect)
+ 719:main.c        **** {
+ 203               		.stabn	68,0,719,.LM18-.LFBB4
+ 204               	.LM18:
+ 205               	.LFBB4:
+ 206 002e 1F92      		push __zero_reg__
+ 207 0030 0F92      		push r0
+ 208 0032 0FB6      		in r0,__SREG__
+ 209 0034 0F92      		push r0
+ 210 0036 1124      		clr __zero_reg__
+ 211 0038 8F93      		push r24
+ 212               	/* prologue: Signal */
+ 213               	/* frame size = 0 */
+ 720:main.c        **** 	// The start condition interrupt occurs when SDA is pulled low
+ 721:main.c        **** 	//   WHEN SCL is high...
+ 722:main.c        **** 	// Which means that the device will count an edge when SCL goes low...
+ 723:main.c        **** 	//   Thus, the number of clock edges will be 17 for the first 8 bits!!!
+ 724:main.c        **** 	//THIS IS A HACK AND SHOULD NOT BE IMPLEMENTED:
+ 725:main.c        **** //	while(getpinPORT(SCL_PIN, SCLPORT))
+ 726:main.c        **** //	{};
+ 727:main.c        **** 	// Should be fixed now, with the new AWAITING_START_SCL state
+ 728:main.c        **** 
+ 729:main.c        **** 	heartBlinkInternal++;
+ 214               		.stabn	68,0,729,.LM19-.LFBB4
+ 215               	.LM19:
+ 216 003a 8091 0000 		lds r24,heartBlinkInternal
+ 217 003e 8F5F      		subi r24,lo8(-(1))
+ 218 0040 8093 0000 		sts heartBlinkInternal,r24
+ 730:main.c        **** 	//set_heartBlink(heartBlinkInternal);
+ 731:main.c        **** 
+ 732:main.c        **** 	//A Start-Detection has occurred
+ 733:main.c        **** 	// The slaves (including this device) have pulled SCL low
+ 734:main.c        **** 	// (from the manual):
+ 735:main.c        **** 	//  The start detector will hold the SCL line low after the master has
+ 736:main.c        **** 	//  forced a negative edge on this line. This allows the slave to wake
+ 737:main.c        **** 	//  up from sleep or complete other tasks before setting up the USI 
+ 738:main.c        **** 	//  Data Register to receive the address. This is done by clearing the 
+ 739:main.c        **** 	//  start condition flag and resetting the counter. 
+ 740:main.c        **** 
+ 741:main.c        **** 	//NOT CERTAIN this is necessary
+ 742:main.c        **** 	// Shouldn't be, since the pin is set as an input...
+ 743:main.c        **** 	//   unless a START is received in the middle of a slave-write???
+ 744:main.c        **** 	// From the diagram showing the connections of the shift-registers
+ 745:main.c        **** 	// it seems we need this to prevent data collision
+ 746:main.c        **** 	//setinPORT(SDA_PIN, SDAPORT);
+ 747:main.c        **** 	//USIDR = 0xff;	
+ 748:main.c        **** 
+ 749:main.c        **** 	//Set the pin directions...
+ 750:main.c        **** 	// Make sure, just in case a start-condition interrupts a slave-write...
+ 751:main.c        **** 	setinPORT(SDA_PIN, SDAPORT);
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 18
+
+
+ 219               		.stabn	68,0,751,.LM20-.LFBB4
+ 220               	.LM20:
+ 221 0044 B898      		cbi 55-0x20,0
+ 752:main.c        **** 	// Leave the CLOCK pin active for SCL-hold at the first overflow
+ 753:main.c        **** 	// (once we've received address/direction)
+ 754:main.c        **** 	setoutPORT(SCL_PIN, SDAPORT);
+ 222               		.stabn	68,0,754,.LM21-.LFBB4
+ 223               	.LM21:
+ 224 0046 BA9A      		sbi 55-0x20,2
+ 225               	.LBB14:
+ 226               	.LBB15:
+ 670:main.c        **** 	usi_i2c_state = USI_STATE_AWAITING_START_SCL;
+ 227               		.stabn	68,0,670,.LM22-.LFBB4
+ 228               	.LM22:
+ 229 0048 81E0      		ldi r24,lo8(1)
+ 230 004a 8093 0000 		sts usi_i2c_state,r24
+ 675:main.c        **** 	USISR = (1<<USIOIF);
+ 231               		.stabn	68,0,675,.LM23-.LFBB4
+ 232               	.LM23:
+ 233 004e 80E4      		ldi r24,lo8(64)
+ 234 0050 8EB9      		out 46-0x20,r24
+ 678:main.c        ****    USICR = (1<<USISIE) //Enable the start-condition interrupt
+ 235               		.stabn	68,0,678,.LM24-.LFBB4
+ 236               	.LM24:
+ 237 0052 88EF      		ldi r24,lo8(-8)
+ 238 0054 8DB9      		out 45-0x20,r24
+ 700:main.c        **** 	USISR = (1<<USISIF) | (USICNT_MASK & 15);
+ 239               		.stabn	68,0,700,.LM25-.LFBB4
+ 240               	.LM25:
+ 241 0056 8FE8      		ldi r24,lo8(-113)
+ 242 0058 8EB9      		out 46-0x20,r24
+ 243               	/* epilogue start */
+ 244               	.LBE15:
+ 245               	.LBE14:
+ 755:main.c        **** 
+ 756:main.c        **** 	//Indicate that the address hasn't yet been received
+ 757:main.c        **** 	// (it should be the first byte transmitted)
+ 758:main.c        **** 	usi_i2c_awaitStartSCL();
+ 759:main.c        **** 
+ 760:main.c        **** 	//heartClear();
+ 761:main.c        **** }
+ 246               		.stabn	68,0,761,.LM26-.LFBB4
+ 247               	.LM26:
+ 248 005a 8F91      		pop r24
+ 249 005c 0F90      		pop r0
+ 250 005e 0FBE      		out __SREG__,r0
+ 251 0060 0F90      		pop r0
+ 252 0062 1F90      		pop __zero_reg__
+ 253 0064 1895      		reti
+ 254               		.size	__vector_13, .-__vector_13
+ 255               	.Lscope4:
+ 256               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 257               		.stabd	78,0,0
+ 258               		.stabs	"edid_checkSummer:F(0,15)",36,0,1068,edid_checkSummer
+ 259               	.global	edid_checkSummer
+ 260               		.type	edid_checkSummer, @function
+ 261               	edid_checkSummer:
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 19
+
+
+ 262               		.stabd	46,0,0
+ 762:main.c        **** 
+ 763:main.c        **** //shifted right once to account for R/W bit...
+ 764:main.c        **** #define USI_I2C_MYEDIDADDRESS 0x50
+ 765:main.c        **** #define USI_I2C_MYLEDADDRESS	0x60
+ 766:main.c        **** 
+ 767:main.c        **** #define usi_i2c_isMyAddress(addr) \
+ 768:main.c        **** 	( ((addr) == USI_I2C_MYEDIDADDRESS)\
+ 769:main.c        **** 	| ((addr) == USI_I2C_MYLEDADDRESS) )
+ 770:main.c        **** 
+ 771:main.c        **** 
+ 772:main.c        **** // In case this device handles multiple addresses... (NYI)
+ 773:main.c        **** uint8_t usi_i2c_requestedAddress = 0;
+ 774:main.c        **** 
+ 775:main.c        **** uint8_t byteNum = 0;
+ 776:main.c        **** 
+ 777:main.c        **** //Basically, everything after the start-condition
+ 778:main.c        **** // ACK and bytes...
+ 779:main.c        **** ISR(USI_OVF_vect)
+ 780:main.c        **** {
+ 781:main.c        **** 	//The USI counter has overflowed... this occurs in a couple cases..
+ 782:main.c        **** 	// First: After the address and r/w bit have been received
+ 783:main.c        **** 	// Second: After the ACK bit has been transmitted (by the slave)
+ 784:main.c        **** 	// Third: After the first data-byte has been received
+ 785:main.c        **** 	// Fourth: After the ACK bit has been transmitted for it...
+ 786:main.c        **** 	// and so on...
+ 787:main.c        **** 
+ 788:main.c        **** 	//The counter-overflow also pulls SCL Low (from the manual):
+ 789:main.c        **** 	// After eight bits containing slave address and data direction 
+ 790:main.c        **** 	// (read or write) have been transferred, the slave counter overflows 
+ 791:main.c        **** 	// and the SCL line is forced low. 
+ 792:main.c        **** 
+ 793:main.c        **** 	// If the slave is not the one the 
+ 794:main.c        **** 	// master has addressed, it releases the SCL line and waits for a new 
+ 795:main.c        **** 	// start condition.
+ 796:main.c        **** 
+ 797:main.c        **** 
+ 798:main.c        **** 	//These cases are the same as AWAITING, except if we're here,
+ 799:main.c        **** 	// then we're no longer awaiting them...
+ 800:main.c        **** 	switch(usi_i2c_state)
+ 801:main.c        **** 	{
+ 802:main.c        **** 		// The start condition interrupt occurs immediately when SDA goes low
+ 803:main.c        **** 		//  while SCL is high. The SCL line needs to go low once before
+ 804:main.c        **** 		//  data can be transmitted (this was a BITCH to find)
+ 805:main.c        **** 		//  in other words, there are 17 clock edges between the start-
+ 806:main.c        **** 		//  condition and having fully received the r/w bit
+ 807:main.c        **** 		case USI_STATE_START_SCL_RECEIVED:
+ 808:main.c        **** 	//		usi_i2c_awaitAddress();
+ 809:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ADDRESS;
+ 810:main.c        **** 
+ 811:main.c        **** 		   //Clear the Start-Condition flag to release SCL
+ 812:main.c        **** 			// ALSO the Overflow flag for the same reason
+ 813:main.c        **** 			// ALSO: set the counter
+ 814:main.c        **** 			//   16 clock edges will signal 8 bits received (address+r/w)
+ 815:main.c        **** 			USISR = (1<<USISIF) //Start Condition Interrupt Flag
+ 816:main.c        **** 										//  (ONLY cleared when written 1)
+ 817:main.c        **** 					| (1<<USIOIF)	//Overflow flag 
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 20
+
+
+ 818:main.c        **** 		         | (USICNT_MASK & 0); //Clear the USI counter
+ 819:main.c        **** 
+ 820:main.c        **** 			break;
+ 821:main.c        **** 		case USI_STATE_ADDRESS_RECEIVED:
+ 822:main.c        **** 			{};
+ 823:main.c        **** 
+ 824:main.c        **** 			byteNum = 0;
+ 825:main.c        **** 			//heartClear();
+ 826:main.c        **** 			//Check to see if it's ours...
+ 827:main.c        **** 			uint8_t udrTemp = USIDR;
+ 828:main.c        **** 			//1 = master-read (slave-writes to SDA)
+ 829:main.c        **** 			//0 = master-write (slave-reads from SDA)
+ 830:main.c        **** 			usi_i2c_readFromSlave = udrTemp & 0x01;
+ 831:main.c        **** 			usi_i2c_requestedAddress = udrTemp >> 1;
+ 832:main.c        **** 			
+ 833:main.c        **** 			//From the manual:
+ 834:main.c        **** 			// When the slave is addressed, it holds the SDA line low during 
+ 835:main.c        **** 			// the acknowledgment cycle before holding the SCL line low again
+ 836:main.c        **** 			if( usi_i2c_isMyAddress(usi_i2c_requestedAddress) )
+ 837:main.c        **** 			{
+ 838:main.c        **** 				// Send ACK:
+ 839:main.c        **** 				// This is a hack:
+ 840:main.c        **** 				//  We get to this point on a falling-edge
+ 841:main.c        **** 				//  the USIDR bit 7 is loaded 0
+ 842:main.c        **** 				//  then the next rising edge it changes to bit 6
+ 843:main.c        **** 				//  the next falling edge triggers the AWAITING_ACK case below
+ 844:main.c        **** 				//  which releases bit 6 from the SDA pin
+ 845:main.c        **** 				//  The master pulls it low again for a STOP condition
+ 846:main.c        **** 				// It might be wiser to just set the PORT value...
+ 847:main.c        **** 				//USIDR = 0x3f; 
+ 848:main.c        **** 				USIDR = 0x00;
+ 849:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 850:main.c        **** 
+ 851:main.c        **** 	         usi_i2c_state = USI_STATE_AWAITING_ACK;
+ 852:main.c        **** 
+ 853:main.c        **** 	         //FTM:
+ 854:main.c        **** 	         // (The USI Counter Register is set to 14 before releasing SCL)
+ 855:main.c        **** 				USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
+ 856:main.c        **** 			}
+ 857:main.c        **** 			else //Another slave was addressed
+ 858:main.c        **** 				usi_i2c_awaitStart();
+ 859:main.c        **** 
+ 860:main.c        **** 			break;
+ 861:main.c        **** 		//ACK has been transmitted from/to this device...
+ 862:main.c        **** 		case USI_STATE_ACK_COMPLETE:
+ 863:main.c        **** 			if(!usi_i2c_readFromSlave)	//slaveRead
+ 864:main.c        **** 			{
+ 865:main.c        **** 				//Release SDA from the ACK (we'll be reading...)
+ 866:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
+ 867:main.c        **** 				//Shouldn't be necessary with above, but can't hurt...
+ 868:main.c        **** 				//UDR = 0xff; 
+ 869:main.c        **** 			}
+ 870:main.c        **** 			else //slaveWrite
+ 871:main.c        **** 			{
+ 872:main.c        **** 				uint8_t masterACK;
+ 873:main.c        **** 				// First ACK will be this device's response to address+r/w
+ 874:main.c        **** 				// Read the master's ACK?
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 21
+
+
+ 875:main.c        **** 				// I guess it'd be stupid to send a read request without
+ 876:main.c        **** 				// actually reading a byte, but I've done it for testing...
+ 877:main.c        **** 				// but if that's the case, then the byteToTransmit will be 
+ 878:main.c        **** 				// decremented anyhow... Not sure how to handle this yet...
+ 879:main.c        **** 				// OTOH: if a read is requested a byte MUST be transferred
+ 880:main.c        **** 				// otherwise a bit-7 = 0 loaded would prevent a master-stop
+ 881:main.c        **** 				masterACK = !(USIDR & 0x01);
+ 882:main.c        **** 
+ 883:main.c        **** 				if(byteNum)// && !(USIDR & 0x01))
+ 884:main.c        **** 				{
+ 885:main.c        **** 					heartBlinkInternal+= 0x10;
+ 886:main.c        **** 					//set_heartBlink(heartBlinkInternal);
+ 887:main.c        **** 				}
+ 888:main.c        **** 
+ 889:main.c        **** 				//Load the byte to write to the master...
+ 890:main.c        **** 				//USIDR = usi_i2c_byteToTransmit;
+ 891:main.c        **** 
+ 892:main.c        **** 				//if we load the next byte and its bit7 is 0
+ 893:main.c        **** 				// it will hold SDA low when the master tries to 
+ 894:main.c        **** 				// pull it high for a stop-condition!
+ 895:main.c        **** 				if(masterACK)
+ 896:main.c        **** 					USIDR = nextByteToTransmit(masterACK);
+ 897:main.c        **** 				else
+ 898:main.c        **** 					USIDR = 0xff;
+ 899:main.c        **** 
+ 900:main.c        **** 				//Decrement IF the master sent ACK...
+ 901:main.c        **** 				//if(masterACK)
+ 902:main.c        **** 				//	usi_i2c_byteToTransmit--;
+ 903:main.c        **** 				
+ 904:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 905:main.c        **** 			}
+ 906:main.c        **** 
+ 907:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_BYTE;
+ 908:main.c        **** 
+ 909:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(0);
+ 910:main.c        **** 			//heartClear();
+ 911:main.c        **** 			break;
+ 912:main.c        **** 		case USI_STATE_BYTE_COMPLETE:  //BYTE transmitted/received
+ 913:main.c        **** 			byteNum++;
+ 914:main.c        **** 			// Get the byte (if receiving)
+ 915:main.c        **** 			if(!usi_i2c_readFromSlave)
+ 916:main.c        **** 			{
+ 917:main.c        **** 				processReceivedByte(USIDR, byteNum);
+ 918:main.c        **** 				//usi_i2c_receivedByte = USIDR;
+ 919:main.c        **** 				heartBlinkInternal = usi_i2c_receivedByte;
+ 920:main.c        **** 				//set_heartBlink(heartBlinkInternal);
+ 921:main.c        **** //				heartClear();
+ 922:main.c        **** 
+ 923:main.c        **** 				// Also, we need to send an ACK...
+ 924:main.c        **** 				USIDR = 0x3f;
+ 925:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 926:main.c        **** 			}
+ 927:main.c        **** 			else //slaveWrite
+ 928:main.c        **** 			{
+ 929:main.c        **** 				// The master sends the ACK in this case...
+ 930:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
+ 931:main.c        **** 				USIDR = 0xff;
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 22
+
+
+ 932:main.c        **** //				heartClear();
+ 933:main.c        **** 			}
+ 934:main.c        **** 
+ 935:main.c        **** 			//Reload the counter to interrupt after the ACK
+ 936:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
+ 937:main.c        **** 
+ 938:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ACK;
+ 939:main.c        **** 			//heartClear();
+ 940:main.c        ****          break;
+ 941:main.c        **** 		//Shouldn't get here...
+ 942:main.c        **** 		default:
+ 943:main.c        **** 			usi_i2c_state = 0x77;
+ 944:main.c        **** 			//set_heartBlink(0x77);
+ 945:main.c        **** 			break;
+ 946:main.c        **** 	}
+ 947:main.c        **** 
+ 948:main.c        **** 
+ 949:main.c        **** 	//I want it to blink if it's not yet read the EDID...
+ 950:main.c        **** 	if((usi_i2c_readFromSlave)
+ 951:main.c        **** 		 && (usi_i2c_state == 4)
+ 952:main.c        **** 		 && (usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS))
+ 953:main.c        **** 		set_heartBlink(0);
+ 954:main.c        **** 	//set_heartBlink((!(usi_i2c_readFromSlave)<<4) | usi_i2c_state);
+ 955:main.c        **** }
+ 956:main.c        **** 
+ 957:main.c        **** uint8_t ledsControlled = FALSE;
+ 958:main.c        **** 
+ 959:main.c        **** #define incrementEDIDIndex()	\
+ 960:main.c        **** {\
+ 961:main.c        **** 	edidArrayIndex++;\
+ 962:main.c        **** 	if(edidArrayIndex == EDIDARRAYLENGTH) \
+ 963:main.c        **** 		edidArrayIndex = 0; \
+ 964:main.c        **** }
+ 965:main.c        **** 
+ 966:main.c        **** #define setEDIDIndex(index) \
+ 967:main.c        **** {\
+ 968:main.c        **** 	edidArrayIndex = index;\
+ 969:main.c        **** 	edidArrayIndex%=EDIDARRAYLENGTH;\
+ 970:main.c        **** }
+ 971:main.c        **** 
+ 972:main.c        **** #define incrementLEDIndex() \
+ 973:main.c        **** {\
+ 974:main.c        **** 	ledIndex++;\
+ 975:main.c        **** 	if(ledIndex == 3)\
+ 976:main.c        **** 		ledIndex = 0;\
+ 977:main.c        **** }
+ 978:main.c        **** 
+ 979:main.c        **** 
+ 980:main.c        **** //Interesting I haven't run into this before...
+ 981:main.c        **** //	if(blah)
+ 982:main.c        **** //		setLEDIndex(blah);
+ 983:main.c        **** //	else
+ 984:main.c        **** //	{ blah }
+ 985:main.c        **** // APPARENTLY the semicolon causes the if statement to be closed (?)
+ 986:main.c        **** #define setLEDIndex(index) \
+ 987:main.c        **** {\
+ 988:main.c        **** 	ledIndex = index;\
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 23
+
+
+ 989:main.c        **** 	ledIndex %= 3;\
+ 990:main.c        **** }
+ 991:main.c        **** 
+ 992:main.c        **** void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
+ 993:main.c        **** {
+ 994:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
+ 995:main.c        ****   {
+ 996:main.c        **** 	if(byteNum == 1)
+ 997:main.c        **** 	{
+ 998:main.c        **** 		// Could be that the EDID request doesn't send a byte-index...?
+ 999:main.c        **** 		//ledsControlled = FALSE;
+1000:main.c        **** 		setEDIDIndex(receivedByte);
+1001:main.c        **** //		edidArrayIndex = receivedByte;
+1002:main.c        **** 	}
+1003:main.c        **** 	else
+1004:main.c        **** 	{
+1005:main.c        **** 		edidArray[edidArrayIndex] = receivedByte;
+1006:main.c        **** 
+1007:main.c        **** 		incrementEDIDIndex();
+1008:main.c        **** 		//edidArrayIndex++;
+1009:main.c        **** 		//edidArrayIndex &= 0x07;
+1010:main.c        **** 	}
+1011:main.c        ****   }
+1012:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
+1013:main.c        ****   {
+1014:main.c        **** 	
+1015:main.c        **** 	ledsControlled = TRUE;
+1016:main.c        **** 
+1017:main.c        **** 	if(byteNum == 1)
+1018:main.c        **** 	{
+1019:main.c        **** 		setLEDIndex(receivedByte);
+1020:main.c        **** 	}
+1021:main.c        **** 	else
+1022:main.c        **** 	{
+1023:main.c        **** 		ledState[ledIndex] = receivedByte;
+1024:main.c        **** 		incrementLEDIndex();
+1025:main.c        **** 	}	
+1026:main.c        ****   }
+1027:main.c        **** }
+1028:main.c        **** 
+1029:main.c        **** uint8_t nextByteToTransmit(uint8_t masterACKed)
+1030:main.c        **** {
+1031:main.c        **** //	static uint8_t temp = 0;
+1032:main.c        **** 
+1033:main.c        **** //	return temp++;
+1034:main.c        **** 
+1035:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
+1036:main.c        ****   {
+1037:main.c        **** 	uint8_t temp = edidArray[edidArrayIndex];
+1038:main.c        **** 
+1039:main.c        **** 	ledsControlled = FALSE;
+1040:main.c        **** 	if(masterACKed)
+1041:main.c        **** 	{
+1042:main.c        **** 		incrementEDIDIndex();
+1043:main.c        **** //		edidArrayIndex++;
+1044:main.c        **** 	}
+1045:main.c        **** 
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 24
+
+
+1046:main.c        **** //	edidArrayIndex &= 0x07;
+1047:main.c        **** 
+1048:main.c        **** 	return temp;
+1049:main.c        ****   }
+1050:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
+1051:main.c        ****   {
+1052:main.c        **** 	uint8_t temp = ledState[ledIndex];
+1053:main.c        **** 
+1054:main.c        **** 	if(masterACKed)
+1055:main.c        **** 	{
+1056:main.c        **** 		incrementLEDIndex();
+1057:main.c        **** 	}
+1058:main.c        **** 
+1059:main.c        **** 	return temp;
+1060:main.c        ****   }
+1061:main.c        **** 
+1062:main.c        ****   //Should only get here if we're not address
+1063:main.c        ****   // in which case we shouldn't even get here.
+1064:main.c        ****   return 0xff;
+1065:main.c        **** }
+1066:main.c        **** 
+1067:main.c        **** 
+1068:main.c        **** void edid_checkSummer(void)
+1069:main.c        **** {
+ 263               		.stabn	68,0,1069,.LM27-.LFBB5
+ 264               	.LM27:
+ 265               	.LFBB5:
+ 266               	/* prologue: function */
+ 267               	/* frame size = 0 */
+ 268               		.stabn	68,0,1069,.LM28-.LFBB5
+ 269               	.LM28:
+ 270 0066 E0E0      		ldi r30,lo8(edidArray)
+ 271 0068 F0E0      		ldi r31,hi8(edidArray)
+1068:main.c        **** void edid_checkSummer(void)
+ 272               		.stabn	68,0,1068,.LM29-.LFBB5
+ 273               	.LM29:
+ 274 006a 80E0      		ldi r24,lo8(0)
+ 275               	.L10:
+1070:main.c        **** 	uint8_t i;
+1071:main.c        **** 	uint8_t sum = 0;
+1072:main.c        **** 
+1073:main.c        **** 	// Don't include the garbage checksum value...
+1074:main.c        **** 	// it will be overwritten here...
+1075:main.c        **** 	for(i=0; i<0x7f; i++)
+1076:main.c        **** 	{
+1077:main.c        **** 		sum += edidArray[i];
+ 276               		.stabn	68,0,1077,.LM30-.LFBB5
+ 277               	.LM30:
+ 278 006c 9191      		ld r25,Z+
+ 279 006e 890F      		add r24,r25
+1075:main.c        **** 	for(i=0; i<0x7f; i++)
+ 280               		.stabn	68,0,1075,.LM31-.LFBB5
+ 281               	.LM31:
+ 282 0070 90E0      		ldi r25,hi8(edidArray+127)
+ 283 0072 E030      		cpi r30,lo8(edidArray+127)
+ 284 0074 F907      		cpc r31,r25
+ 285 0076 01F4      		brne .L10
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 25
+
+
+1078:main.c        **** 	}
+1079:main.c        **** 
+1080:main.c        **** 	//Load the calculated checksum
+1081:main.c        **** 	edidArray[0x7f] = (uint8_t)((uint8_t)0 - (uint8_t)(sum));
+ 286               		.stabn	68,0,1081,.LM32-.LFBB5
+ 287               	.LM32:
+ 288 0078 8195      		neg r24
+ 289 007a 8093 0000 		sts edidArray+127,r24
+ 290               	/* epilogue start */
+1082:main.c        **** }
+ 291               		.stabn	68,0,1082,.LM33-.LFBB5
+ 292               	.LM33:
+ 293 007e 0895      		ret
+ 294               		.size	edid_checkSummer, .-edid_checkSummer
+ 295               		.stabs	"sum:r(3,2)",64,0,1071,24
+ 296               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 297               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 298               	.Lscope5:
+ 299               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 300               		.stabd	78,0,0
+ 301               		.stabs	"updateLEDs:F(0,15)",36,0,1173,updateLEDs
+ 302               	.global	updateLEDs
+ 303               		.type	updateLEDs, @function
+ 304               	updateLEDs:
+ 305               		.stabd	46,0,0
+1083:main.c        **** 
+1084:main.c        **** 
+1085:main.c        **** 
+1086:main.c        **** 
+1087:main.c        **** #if FADER_ENABLED
+1088:main.c        **** //uint8_t ledsControlled = FALSE;
+1089:main.c        **** 
+1090:main.c        **** #define  LED_R PB4				// D4
+1091:main.c        **** #define  LED_G PB3				//	D5
+1092:main.c        **** #define	LED_B HEART_PINNUM   //	D2 after trace-change PB1 //NYI
+1093:main.c        **** #define LED_PORT PORTB
+1094:main.c        **** 
+1095:main.c        **** 
+1096:main.c        **** hfm_t ledHFM[3];
+1097:main.c        **** 
+1098:main.c        **** 
+1099:main.c        **** void updateLEDs(void);
+1100:main.c        **** 
+1101:main.c        **** void updateLEDFader(void)
+1102:main.c        **** {
+1103:main.c        **** 	static uint8_t delay=0;
+1104:main.c        **** 	static theta_t theta=2; //test = 2;
+1105:main.c        **** 
+1106:main.c        **** 	delay++;
+1107:main.c        **** 	if(delay == 0xff)
+1108:main.c        **** 		theta++;
+1109:main.c        **** 
+1110:main.c        **** 	if(theta == SINE_PI*3)
+1111:main.c        **** 		theta = 0;
+1112:main.c        **** 
+1113:main.c        **** 
+1114:main.c        **** 
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 26
+
+
+1115:main.c        **** 	if(theta < SINE_2PI)
+1116:main.c        **** 		ledState[0] = \
+1117:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127); 
+1118:main.c        **** 
+1119:main.c        **** 	if((theta > SINE_PI) && (theta < SINE_PI*3))
+1120:main.c        **** 	  	ledState[1] = \
+1121:main.c        **** 		 	(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_PI) 
+1122:main.c        **** 				+ (int16_t)127);	  
+1123:main.c        **** 
+1124:main.c        **** 	if(theta > SINE_2PI)
+1125:main.c        **** 		ledState[2] = \
+1126:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_2PI)
+1127:main.c        **** 				+ (int16_t)127);
+1128:main.c        **** 	else if(theta < SINE_PI)
+1129:main.c        **** 		ledState[2] = \
+1130:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 + SINE_PI) 
+1131:main.c        **** 				+ (int16_t)127);
+1132:main.c        **** //	ledState[1] = 0x07;
+1133:main.c        **** 	
+1134:main.c        **** //	ledState[2] = (uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127);
+1135:main.c        **** 
+1136:main.c        **** 		//(uint32_t)(sineRaw(theta - SINE_PI_2))*127/SINE_MAX + 127;
+1137:main.c        **** 
+1138:main.c        **** 	/*
+1139:main.c        **** 	if(theta == 0xff)
+1140:main.c        **** 	{
+1141:main.c        **** 		theta=0;
+1142:main.c        **** 		ledState[2]++; // = test; //2; //0x07; //theta;
+1143:main.c        **** 	}
+1144:main.c        **** */
+1145:main.c        **** //	ledState[0] = 0x07; //theta;
+1146:main.c        **** 
+1147:main.c        **** //	if(theta >= SINE_2PI) //*3)
+1148:main.c        **** //		theta -= SINE_2PI; //*3;
+1149:main.c        **** 
+1150:main.c        **** //	if(theta == SINE_2PI*8)
+1151:main.c        **** //	{
+1152:main.c        **** //		theta = 0;
+1153:main.c        **** //		togglebit(7, ledState[1]);
+1154:main.c        **** //	}
+1155:main.c        **** 
+1156:main.c        **** //	if(theta < SINE_2PI)
+1157:main.c        **** //		ledState[0] = (int32_t)theta*(int32_t)255/SINE_2PI;
+1158:main.c        **** //			(((int32_t)sineRaw(theta) * (int32_t)127) / 
+1159:main.c        **** //						 (int32_t)SINE_MAX) + 127;
+1160:main.c        **** 		//((int8_t)(sineRaw(theta - SINE_PI_2)>>8) + (int8_t)127);
+1161:main.c        **** 
+1162:main.c        **** /*	if((theta > SINE_PI) && (theta < SINE_PI*3))
+1163:main.c        **** 		ledState[1] = ((sineRaw(theta - SINE_PI_2 - SINE_PI)>>8) + 127);
+1164:main.c        **** 
+1165:main.c        **** 	if(theta > SINE_2PI)
+1166:main.c        **** 		ledState[2] = ((sineRaw(theta - SINE_PI_2 - SINE_2PI)>>8) + 127);
+1167:main.c        **** 	else if(theta < SINE_PI)
+1168:main.c        **** 		ledState[2] = ((sineRaw(theta - SINE_PI_2 + SINE_PI)>>8) + 127);
+1169:main.c        **** */
+1170:main.c        **** 	updateLEDs();
+1171:main.c        **** }
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 27
+
+
+1172:main.c        **** 
+1173:main.c        **** void updateLEDs(void)
+1174:main.c        **** {
+ 306               		.stabn	68,0,1174,.LM34-.LFBB6
+ 307               	.LM34:
+ 308               	.LFBB6:
+ 309 0080 0F93      		push r16
+ 310 0082 1F93      		push r17
+ 311 0084 CF93      		push r28
+ 312 0086 DF93      		push r29
+ 313               	/* prologue: function */
+ 314               	/* frame size = 0 */
+ 315               		.stabn	68,0,1174,.LM35-.LFBB6
+ 316               	.LM35:
+ 317 0088 00E0      		ldi r16,lo8(0)
+ 318 008a 10E0      		ldi r17,hi8(0)
+ 319 008c C0E0      		ldi r28,lo8(0)
+ 320 008e D0E0      		ldi r29,hi8(0)
+ 321               	.L15:
+1175:main.c        **** 	static uint8_t lastState[3] = {0,0,0};
+1176:main.c        **** 
+1177:main.c        **** 	uint8_t i;
+1178:main.c        **** 	for(i=0; i<3; i++)
+1179:main.c        **** 	{
+1180:main.c        **** 	//	if(ledState[i] != lastState[i])
+1181:main.c        **** 		{
+1182:main.c        **** 		//	ledsControlled = TRUE;
+1183:main.c        **** 			lastState[i] = ledState[i];
+ 322               		.stabn	68,0,1183,.LM36-.LFBB6
+ 323               	.LM36:
+ 324 0090 FE01      		movw r30,r28
+ 325 0092 E050      		subi r30,lo8(-(ledState))
+ 326 0094 F040      		sbci r31,hi8(-(ledState))
+ 327 0096 8081      		ld r24,Z
+ 328 0098 DE01      		movw r26,r28
+ 329 009a A050      		subi r26,lo8(-(lastState.1732))
+ 330 009c B040      		sbci r27,hi8(-(lastState.1732))
+ 331 009e 8C93      		st X,r24
+1184:main.c        **** 			hfm_setPower(&(ledHFM[i]), ledState[i]);
+ 332               		.stabn	68,0,1184,.LM37-.LFBB6
+ 333               	.LM37:
+ 334 00a0 6081      		ld r22,Z
+ 335 00a2 C801      		movw r24,r16
+ 336 00a4 8050      		subi r24,lo8(-(ledHFM))
+ 337 00a6 9040      		sbci r25,hi8(-(ledHFM))
+ 338 00a8 00D0      		rcall hfm_setPower
+ 339 00aa 2196      		adiw r28,1
+ 340 00ac 0C5F      		subi r16,lo8(-(4))
+ 341 00ae 1F4F      		sbci r17,hi8(-(4))
+1178:main.c        **** 	for(i=0; i<3; i++)
+ 342               		.stabn	68,0,1178,.LM38-.LFBB6
+ 343               	.LM38:
+ 344 00b0 C330      		cpi r28,3
+ 345 00b2 D105      		cpc r29,__zero_reg__
+ 346 00b4 01F4      		brne .L15
+1185:main.c        **** 		}
+1186:main.c        **** 	}
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 28
+
+
+1187:main.c        **** 	//hfm_setPower(&led_r, ledState[0]);
+1188:main.c        **** 	//hfm_setPower(&led_g, ledState[1]);
+1189:main.c        **** 
+1190:main.c        **** 
+1191:main.c        **** 	if(hfm_nextOutput(&(ledHFM[0])))
+ 347               		.stabn	68,0,1191,.LM39-.LFBB6
+ 348               	.LM39:
+ 349 00b6 80E0      		ldi r24,lo8(ledHFM)
+ 350 00b8 90E0      		ldi r25,hi8(ledHFM)
+ 351 00ba 00D0      		rcall hfm_nextOutput
+ 352 00bc 8823      		tst r24
+ 353 00be 01F0      		breq .L16
+1192:main.c        **** 		clrpinPORT(LED_R, LED_PORT);
+ 354               		.stabn	68,0,1192,.LM40-.LFBB6
+ 355               	.LM40:
+ 356 00c0 C498      		cbi 56-0x20,4
+ 357 00c2 00C0      		rjmp .L17
+ 358               	.L16:
+1193:main.c        **** 	else
+1194:main.c        **** 		setpinPORT(LED_R, LED_PORT);
+ 359               		.stabn	68,0,1194,.LM41-.LFBB6
+ 360               	.LM41:
+ 361 00c4 C49A      		sbi 56-0x20,4
+ 362               	.L17:
+1195:main.c        **** 
+1196:main.c        **** 	if(hfm_nextOutput(&(ledHFM[1])))
+ 363               		.stabn	68,0,1196,.LM42-.LFBB6
+ 364               	.LM42:
+ 365 00c6 80E0      		ldi r24,lo8(ledHFM+4)
+ 366 00c8 90E0      		ldi r25,hi8(ledHFM+4)
+ 367 00ca 00D0      		rcall hfm_nextOutput
+ 368 00cc 8823      		tst r24
+ 369 00ce 01F0      		breq .L18
+1197:main.c        **** 		clrpinPORT(LED_G, LED_PORT);
+ 370               		.stabn	68,0,1197,.LM43-.LFBB6
+ 371               	.LM43:
+ 372 00d0 C398      		cbi 56-0x20,3
+ 373 00d2 00C0      		rjmp .L19
+ 374               	.L18:
+1198:main.c        **** 	else
+1199:main.c        **** 		setpinPORT(LED_G, LED_PORT);
+ 375               		.stabn	68,0,1199,.LM44-.LFBB6
+ 376               	.LM44:
+ 377 00d4 C39A      		sbi 56-0x20,3
+ 378               	.L19:
+1200:main.c        **** 
+1201:main.c        **** 	if(hfm_nextOutput(&(ledHFM[2])))
+ 379               		.stabn	68,0,1201,.LM45-.LFBB6
+ 380               	.LM45:
+ 381 00d6 80E0      		ldi r24,lo8(ledHFM+8)
+ 382 00d8 90E0      		ldi r25,hi8(ledHFM+8)
+ 383 00da 00D0      		rcall hfm_nextOutput
+ 384 00dc 8823      		tst r24
+ 385 00de 01F0      		breq .L20
+1202:main.c        **** 		clrpinPORT(LED_B, LED_PORT);
+ 386               		.stabn	68,0,1202,.LM46-.LFBB6
+ 387               	.LM46:
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 29
+
+
+ 388 00e0 C198      		cbi 56-0x20,1
+ 389 00e2 00C0      		rjmp .L22
+ 390               	.L20:
+1203:main.c        **** 	else
+1204:main.c        **** 		setpinPORT(LED_B, LED_PORT);
+ 391               		.stabn	68,0,1204,.LM47-.LFBB6
+ 392               	.LM47:
+ 393 00e4 C19A      		sbi 56-0x20,1
+ 394               	.L22:
+ 395               	/* epilogue start */
+1205:main.c        **** 
+1206:main.c        **** 	//NYI:
+1207:main.c        **** 	//if(ledState[2])
+1208:main.c        **** 
+1209:main.c        **** //	togglepinPORT(LED_R, LED_PORT);
+1210:main.c        **** //	togglepinPORT(LED_G, LED_PORT);
+1211:main.c        **** }
+ 396               		.stabn	68,0,1211,.LM48-.LFBB6
+ 397               	.LM48:
+ 398 00e6 DF91      		pop r29
+ 399 00e8 CF91      		pop r28
+ 400 00ea 1F91      		pop r17
+ 401 00ec 0F91      		pop r16
+ 402 00ee 0895      		ret
+ 403               		.size	updateLEDs, .-updateLEDs
+ 404               		.stabs	"lastState:V(0,16)=ar(0,17)=r(0,17);0;0177777;;0;2;(3,2)",38,0,1175,lastState.1732
+ 405               		.stabn	192,0,0,.LFBB6-.LFBB6
+ 406               		.stabn	224,0,0,.Lscope6-.LFBB6
+ 407               	.Lscope6:
+ 408               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 409               		.stabd	78,0,0
+ 410               		.stabs	"updateLEDFader:F(0,15)",36,0,1101,updateLEDFader
+ 411               	.global	updateLEDFader
+ 412               		.type	updateLEDFader, @function
+ 413               	updateLEDFader:
+ 414               		.stabd	46,0,0
+1102:main.c        **** {
+ 415               		.stabn	68,0,1102,.LM49-.LFBB7
+ 416               	.LM49:
+ 417               	.LFBB7:
+ 418               	/* prologue: function */
+ 419               	/* frame size = 0 */
+1106:main.c        **** 	delay++;
+ 420               		.stabn	68,0,1106,.LM50-.LFBB7
+ 421               	.LM50:
+ 422 00f0 8091 0000 		lds r24,delay.1692
+ 423 00f4 8F5F      		subi r24,lo8(-(1))
+ 424 00f6 8093 0000 		sts delay.1692,r24
+1107:main.c        **** 	if(delay == 0xff)
+ 425               		.stabn	68,0,1107,.LM51-.LFBB7
+ 426               	.LM51:
+ 427 00fa 8F3F      		cpi r24,lo8(-1)
+ 428 00fc 01F4      		brne .L25
+1108:main.c        **** 		theta++;
+ 429               		.stabn	68,0,1108,.LM52-.LFBB7
+ 430               	.LM52:
+ 431 00fe 8091 0000 		lds r24,theta.1693
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 30
+
+
+ 432 0102 9091 0000 		lds r25,(theta.1693)+1
+ 433 0106 0196      		adiw r24,1
+ 434 0108 9093 0000 		sts (theta.1693)+1,r25
+ 435 010c 8093 0000 		sts theta.1693,r24
+ 436               	.L25:
+1110:main.c        **** 	if(theta == SINE_PI*3)
+ 437               		.stabn	68,0,1110,.LM53-.LFBB7
+ 438               	.LM53:
+ 439 0110 8091 0000 		lds r24,theta.1693
+ 440 0114 9091 0000 		lds r25,(theta.1693)+1
+ 441 0118 23E0      		ldi r18,hi8(768)
+ 442 011a 8030      		cpi r24,lo8(768)
+ 443 011c 9207      		cpc r25,r18
+ 444 011e 01F4      		brne .L26
+1111:main.c        **** 		theta = 0;
+ 445               		.stabn	68,0,1111,.LM54-.LFBB7
+ 446               	.LM54:
+ 447 0120 1092 0000 		sts (theta.1693)+1,__zero_reg__
+ 448 0124 1092 0000 		sts theta.1693,__zero_reg__
+ 449               	.L26:
+1115:main.c        **** 	if(theta < SINE_2PI)
+ 450               		.stabn	68,0,1115,.LM55-.LFBB7
+ 451               	.LM55:
+ 452 0128 8091 0000 		lds r24,theta.1693
+ 453 012c 9091 0000 		lds r25,(theta.1693)+1
+ 454 0130 42E0      		ldi r20,hi8(512)
+ 455 0132 8030      		cpi r24,lo8(512)
+ 456 0134 9407      		cpc r25,r20
+ 457 0136 04F4      		brge .L27
+1117:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127); 
+ 458               		.stabn	68,0,1117,.LM56-.LFBB7
+ 459               	.LM56:
+ 460 0138 8058      		subi r24,lo8(-(-128))
+ 461 013a 9040      		sbci r25,hi8(-(-128))
+ 462 013c 00D0      		rcall sineRaw8
+ 463 013e 8158      		subi r24,lo8(-(127))
+1116:main.c        **** 		ledState[0] = \
+ 464               		.stabn	68,0,1116,.LM57-.LFBB7
+ 465               	.LM57:
+ 466 0140 8093 0000 		sts ledState,r24
+ 467               	.L27:
+1119:main.c        **** 	if((theta > SINE_PI) && (theta < SINE_PI*3))
+ 468               		.stabn	68,0,1119,.LM58-.LFBB7
+ 469               	.LM58:
+ 470 0144 8091 0000 		lds r24,theta.1693
+ 471 0148 9091 0000 		lds r25,(theta.1693)+1
+ 472 014c 9C01      		movw r18,r24
+ 473 014e 2150      		subi r18,lo8(-(-257))
+ 474 0150 3140      		sbci r19,hi8(-(-257))
+ 475 0152 41E0      		ldi r20,hi8(511)
+ 476 0154 2F3F      		cpi r18,lo8(511)
+ 477 0156 3407      		cpc r19,r20
+ 478 0158 00F4      		brsh .L28
+1121:main.c        **** 		 	(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_PI) 
+ 479               		.stabn	68,0,1121,.LM59-.LFBB7
+ 480               	.LM59:
+ 481 015a 8058      		subi r24,lo8(-(-384))
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 31
+
+
+ 482 015c 9140      		sbci r25,hi8(-(-384))
+ 483 015e 00D0      		rcall sineRaw8
+ 484 0160 8158      		subi r24,lo8(-(127))
+1120:main.c        **** 	  	ledState[1] = \
+ 485               		.stabn	68,0,1120,.LM60-.LFBB7
+ 486               	.LM60:
+ 487 0162 8093 0000 		sts ledState+1,r24
+ 488               	.L28:
+1124:main.c        **** 	if(theta > SINE_2PI)
+ 489               		.stabn	68,0,1124,.LM61-.LFBB7
+ 490               	.LM61:
+ 491 0166 8091 0000 		lds r24,theta.1693
+ 492 016a 9091 0000 		lds r25,(theta.1693)+1
+ 493 016e 22E0      		ldi r18,hi8(513)
+ 494 0170 8130      		cpi r24,lo8(513)
+ 495 0172 9207      		cpc r25,r18
+ 496 0174 04F0      		brlt .L29
+1126:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_2PI)
+ 497               		.stabn	68,0,1126,.LM62-.LFBB7
+ 498               	.LM62:
+ 499 0176 8058      		subi r24,lo8(-(-640))
+ 500 0178 9240      		sbci r25,hi8(-(-640))
+ 501 017a 00C0      		rjmp .L32
+ 502               	.L29:
+1128:main.c        **** 	else if(theta < SINE_PI)
+ 503               		.stabn	68,0,1128,.LM63-.LFBB7
+ 504               	.LM63:
+ 505 017c 8F3F      		cpi r24,255
+ 506 017e 9105      		cpc r25,__zero_reg__
+ 507 0180 01F0      		breq .+2
+ 508 0182 04F4      		brge .L30
+1130:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 + SINE_PI) 
+ 509               		.stabn	68,0,1130,.LM64-.LFBB7
+ 510               	.LM64:
+ 511 0184 8058      		subi r24,lo8(-(128))
+ 512 0186 9F4F      		sbci r25,hi8(-(128))
+ 513               	.L32:
+ 514 0188 00D0      		rcall sineRaw8
+ 515 018a 8158      		subi r24,lo8(-(127))
+1129:main.c        **** 		ledState[2] = \
+ 516               		.stabn	68,0,1129,.LM65-.LFBB7
+ 517               	.LM65:
+ 518 018c 8093 0000 		sts ledState+2,r24
+ 519               	.L30:
+1170:main.c        **** 	updateLEDs();
+ 520               		.stabn	68,0,1170,.LM66-.LFBB7
+ 521               	.LM66:
+ 522 0190 00D0      		rcall updateLEDs
+ 523               	/* epilogue start */
+1171:main.c        **** }
+ 524               		.stabn	68,0,1171,.LM67-.LFBB7
+ 525               	.LM67:
+ 526 0192 0895      		ret
+ 527               		.size	updateLEDFader, .-updateLEDFader
+ 528               		.stabs	"delay:V(3,2)",38,0,1103,delay.1692
+ 529               		.stabs	"theta:V(10,1)",38,0,1104,theta.1693
+ 530               		.stabn	192,0,0,.LFBB7-.LFBB7
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 32
+
+
+ 531               		.stabn	224,0,0,.Lscope7-.LFBB7
+ 532               	.Lscope7:
+ 533               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 534               		.stabd	78,0,0
+ 535               		.stabs	"main:F(0,1)",36,0,1214,main
+ 536               	.global	main
+ 537               		.type	main, @function
+ 538               	main:
+ 539               		.stabd	46,0,0
+1212:main.c        **** #endif
+1213:main.c        **** 
+1214:main.c        **** int main(void)
+1215:main.c        **** {
+ 540               		.stabn	68,0,1215,.LM68-.LFBB8
+ 541               	.LM68:
+ 542               	.LFBB8:
+ 543 0194 CF93      		push r28
+ 544 0196 DF93      		push r29
+ 545               	/* prologue: function */
+ 546               	/* frame size = 0 */
+ 547               		.stabn	68,0,1215,.LM69-.LFBB8
+ 548               	.LM69:
+ 549 0198 C0E0      		ldi r28,lo8(0)
+ 550 019a D0E0      		ldi r29,hi8(0)
+ 551               	.L34:
+1216:main.c        **** #if FADER_ENABLED
+1217:main.c        **** 	uint8_t i;
+1218:main.c        **** 	for(i=0; i<3; i++)
+1219:main.c        **** 		hfm_setup(&(ledHFM[i]), 0, 255);
+ 552               		.stabn	68,0,1219,.LM70-.LFBB8
+ 553               	.LM70:
+ 554 019c CE01      		movw r24,r28
+ 555 019e 8050      		subi r24,lo8(-(ledHFM))
+ 556 01a0 9040      		sbci r25,hi8(-(ledHFM))
+ 557 01a2 60E0      		ldi r22,lo8(0)
+ 558 01a4 4FEF      		ldi r20,lo8(-1)
+ 559 01a6 00D0      		rcall hfm_setup
+ 560 01a8 2496      		adiw r28,4
+1218:main.c        **** 	for(i=0; i<3; i++)
+ 561               		.stabn	68,0,1218,.LM71-.LFBB8
+ 562               	.LM71:
+ 563 01aa CC30      		cpi r28,12
+ 564 01ac D105      		cpc r29,__zero_reg__
+ 565 01ae 01F4      		brne .L34
+1220:main.c        **** 	//hfm_setup(&led_g, 0, 255);
+1221:main.c        **** #endif
+1222:main.c        **** 
+1223:main.c        **** //	uint16_t i;
+1224:main.c        **** //	for(i=0; i<256; i++)
+1225:main.c        **** //		edidArray[i] = i;
+1226:main.c        **** 
+1227:main.c        **** 	//Found experimentally: assuming the free-running ADC is always 13
+1228:main.c        **** 	// cycles per interrupt...
+1229:main.c        **** 	// The default value was read to be 0x9f
+1230:main.c        **** 	// This is of course device-specific
+1231:main.c        **** //	OSCCAL = 0x9a;
+1232:main.c        **** 
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 33
+
+
+1233:main.c        **** 	//*** Initializations ***
+1234:main.c        **** 
+1235:main.c        **** 	//!!! WDT could cause problems... this probably should be inited earlier and called everywhere...
+1236:main.c        **** 	//INIT_HEARTBEAT(HEARTBEATPIN, HEARTBEAT, HEARTCONNECTION);
+1237:main.c        **** 
+1238:main.c        **** 
+1239:main.c        **** 	init_heartBeat();
+ 566               		.stabn	68,0,1239,.LM72-.LFBB8
+ 567               	.LM72:
+ 568 01b0 00D0      		rcall init_heartBeat
+1240:main.c        **** 
+1241:main.c        **** 	setHeartRate(0);	
+ 569               		.stabn	68,0,1241,.LM73-.LFBB8
+ 570               	.LM73:
+ 571 01b2 80E0      		ldi r24,lo8(0)
+ 572 01b4 00D0      		rcall setHeartRate
+1242:main.c        **** 
+1243:main.c        **** 	//Blink until the EDID is read...
+1244:main.c        **** 	//This is hokey...
+1245:main.c        **** 	//set_heartBlink(1);
+1246:main.c        **** 
+1247:main.c        **** 	edid_checkSummer();
+ 573               		.stabn	68,0,1247,.LM74-.LFBB8
+ 574               	.LM74:
+ 575 01b6 00D0      		rcall edid_checkSummer
+ 576               	.LBB16:
+ 577               	.LBB17:
+ 713:main.c        **** 	usi_i2c_awaitStart();
+ 578               		.stabn	68,0,713,.LM75-.LFBB8
+ 579               	.LM75:
+ 580 01b8 00D0      		rcall usi_i2c_awaitStart
+ 581               	.LBE17:
+ 582               	.LBE16:
+1248:main.c        **** 
+1249:main.c        **** 	usi_i2c_slaveInit();
+1250:main.c        **** 
+1251:main.c        **** #if FADER_ENABLED
+1252:main.c        **** 	setoutPORT(LED_R, LED_PORT);
+ 583               		.stabn	68,0,1252,.LM76-.LFBB8
+ 584               	.LM76:
+ 585 01ba BC9A      		sbi 55-0x20,4
+1253:main.c        **** 	setoutPORT(LED_G, LED_PORT);
+ 586               		.stabn	68,0,1253,.LM77-.LFBB8
+ 587               	.LM77:
+ 588 01bc BB9A      		sbi 55-0x20,3
+1254:main.c        **** 	setpinPORT(LED_R, LED_PORT);
+ 589               		.stabn	68,0,1254,.LM78-.LFBB8
+ 590               	.LM78:
+ 591 01be C49A      		sbi 56-0x20,4
+1255:main.c        **** 	setpinPORT(LED_G, LED_PORT);
+ 592               		.stabn	68,0,1255,.LM79-.LFBB8
+ 593               	.LM79:
+ 594 01c0 C39A      		sbi 56-0x20,3
+ 595               	.L40:
+1256:main.c        **** #endif
+1257:main.c        **** 
+1258:main.c        **** //	setoutPORT(LED_B, LED_PORT);
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 34
+
+
+1259:main.c        **** 
+1260:main.c        **** 	//This was only necessary for debugging timer initialization bugs...
+1261:main.c        **** 	// which have been resolved
+1262:main.c        **** //	set_heartBlink(retVal);
+1263:main.c        **** 
+1264:main.c        **** 	while(1)
+1265:main.c        **** 	{
+1266:main.c        **** #if FADER_ENABLED
+1267:main.c        **** 		if(!ledsControlled)
+ 596               		.stabn	68,0,1267,.LM80-.LFBB8
+ 597               	.LM80:
+ 598 01c2 8091 0000 		lds r24,ledsControlled
+ 599 01c6 8823      		tst r24
+ 600 01c8 01F4      		brne .L35
+1268:main.c        **** 		{
+1269:main.c        **** 			extern uint8_t heartBlink; 
+1270:main.c        **** 
+1271:main.c        **** 			if(heartBlink)
+ 601               		.stabn	68,0,1271,.LM81-.LFBB8
+ 602               	.LM81:
+ 603 01ca 8091 0000 		lds r24,heartBlink
+ 604 01ce 8823      		tst r24
+ 605 01d0 01F0      		breq .L36
+1272:main.c        **** 				heartUpdate();
+ 606               		.stabn	68,0,1272,.LM82-.LFBB8
+ 607               	.LM82:
+ 608 01d2 00D0      		rcall heartUpdate
+ 609 01d4 00C0      		rjmp .L40
+ 610               	.L36:
+1273:main.c        **** 			else
+1274:main.c        **** 				updateLEDFader();
+ 611               		.stabn	68,0,1274,.LM83-.LFBB8
+ 612               	.LM83:
+ 613 01d6 00D0      		rcall updateLEDFader
+ 614 01d8 00C0      		rjmp .L40
+ 615               	.L35:
+1275:main.c        **** 		}
+1276:main.c        **** 		//This was not previously elsed... how did the heart work at all?!
+1277:main.c        **** 		// at one point it didn't (and neither did updateLEDs()
+1278:main.c        **** 		// but somehow it started up again
+1279:main.c        **** 		// a/o v49: May have been a result of the hfm bug...
+1280:main.c        **** 		// 			(how did it start up again? Something to do with an
+1281:main.c        **** 		//           uninitialized value in HFM?)
+1282:main.c        **** 		else
+1283:main.c        **** 		{
+1284:main.c        **** 			// The heartbeat may have been in input (off) mode when switched
+1285:main.c        **** 			setoutPORT(LED_B, LED_PORT);
+ 616               		.stabn	68,0,1285,.LM84-.LFBB8
+ 617               	.LM84:
+ 618 01da B99A      		sbi 55-0x20,1
+1286:main.c        **** 
+1287:main.c        **** 			updateLEDs();
+ 619               		.stabn	68,0,1287,.LM85-.LFBB8
+ 620               	.LM85:
+ 621 01dc 00D0      		rcall updateLEDs
+ 622 01de 00C0      		rjmp .L40
+ 623               		.size	main, .-main
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 35
+
+
+ 624               	.Lscope8:
+ 625               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 626               		.stabd	78,0,0
+ 627               		.stabs	"__vector_14:F(0,15)",36,0,779,__vector_14
+ 628               	.global	__vector_14
+ 629               		.type	__vector_14, @function
+ 630               	__vector_14:
+ 631               		.stabd	46,0,0
+ 780:main.c        **** {
+ 632               		.stabn	68,0,780,.LM86-.LFBB9
+ 633               	.LM86:
+ 634               	.LFBB9:
+ 635 01e0 1F92      		push __zero_reg__
+ 636 01e2 0F92      		push r0
+ 637 01e4 0FB6      		in r0,__SREG__
+ 638 01e6 0F92      		push r0
+ 639 01e8 1124      		clr __zero_reg__
+ 640 01ea 2F93      		push r18
+ 641 01ec 3F93      		push r19
+ 642 01ee 4F93      		push r20
+ 643 01f0 5F93      		push r21
+ 644 01f2 6F93      		push r22
+ 645 01f4 7F93      		push r23
+ 646 01f6 8F93      		push r24
+ 647 01f8 9F93      		push r25
+ 648 01fa AF93      		push r26
+ 649 01fc BF93      		push r27
+ 650 01fe EF93      		push r30
+ 651 0200 FF93      		push r31
+ 652               	/* prologue: Signal */
+ 653               	/* frame size = 0 */
+ 800:main.c        **** 	switch(usi_i2c_state)
+ 654               		.stabn	68,0,800,.LM87-.LFBB9
+ 655               	.LM87:
+ 656 0202 8091 0000 		lds r24,usi_i2c_state
+ 657 0206 8230      		cpi r24,lo8(2)
+ 658 0208 01F0      		breq .L44
+ 659 020a 8330      		cpi r24,lo8(3)
+ 660 020c 00F4      		brsh .L47
+ 661 020e 8130      		cpi r24,lo8(1)
+ 662 0210 01F0      		breq .+2
+ 663 0212 00C0      		rjmp .L42
+ 664 0214 00C0      		rjmp .L73
+ 665               	.L47:
+ 666 0216 8330      		cpi r24,lo8(3)
+ 667 0218 01F0      		breq .L45
+ 668 021a 8430      		cpi r24,lo8(4)
+ 669 021c 01F0      		breq .+2
+ 670 021e 00C0      		rjmp .L42
+ 671 0220 00C0      		rjmp .L74
+ 672               	.L73:
+ 673               	.LBB18:
+ 809:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ADDRESS;
+ 674               		.stabn	68,0,809,.LM88-.LFBB9
+ 675               	.LM88:
+ 676 0222 82E0      		ldi r24,lo8(2)
+ 677 0224 8093 0000 		sts usi_i2c_state,r24
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 36
+
+
+ 815:main.c        **** 			USISR = (1<<USISIF) //Start Condition Interrupt Flag
+ 678               		.stabn	68,0,815,.LM89-.LFBB9
+ 679               	.LM89:
+ 680 0228 80EC      		ldi r24,lo8(-64)
+ 681 022a 00C0      		rjmp .L69
+ 682               	.L44:
+ 824:main.c        **** 			byteNum = 0;
+ 683               		.stabn	68,0,824,.LM90-.LFBB9
+ 684               	.LM90:
+ 685 022c 1092 0000 		sts byteNum,__zero_reg__
+ 827:main.c        **** 			uint8_t udrTemp = USIDR;
+ 686               		.stabn	68,0,827,.LM91-.LFBB9
+ 687               	.LM91:
+ 688 0230 8FB1      		in r24,47-0x20
+ 830:main.c        **** 			usi_i2c_readFromSlave = udrTemp & 0x01;
+ 689               		.stabn	68,0,830,.LM92-.LFBB9
+ 690               	.LM92:
+ 691 0232 982F      		mov r25,r24
+ 692 0234 9170      		andi r25,lo8(1)
+ 693 0236 9093 0000 		sts usi_i2c_readFromSlave,r25
+ 831:main.c        **** 			usi_i2c_requestedAddress = udrTemp >> 1;
+ 694               		.stabn	68,0,831,.LM93-.LFBB9
+ 695               	.LM93:
+ 696 023a 8695      		lsr r24
+ 697 023c 8093 0000 		sts usi_i2c_requestedAddress,r24
+ 836:main.c        **** 			if( usi_i2c_isMyAddress(usi_i2c_requestedAddress) )
+ 698               		.stabn	68,0,836,.LM94-.LFBB9
+ 699               	.LM94:
+ 700 0240 8036      		cpi r24,lo8(96)
+ 701 0242 01F0      		breq .L67
+ 702 0244 8035      		cpi r24,lo8(80)
+ 703 0246 01F4      		brne .L49
+ 704               	.L67:
+ 848:main.c        **** 				USIDR = 0x00;
+ 705               		.stabn	68,0,848,.LM95-.LFBB9
+ 706               	.LM95:
+ 707 0248 1FB8      		out 47-0x20,__zero_reg__
+ 849:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 708               		.stabn	68,0,849,.LM96-.LFBB9
+ 709               	.LM96:
+ 710 024a B89A      		sbi 55-0x20,0
+ 851:main.c        **** 	         usi_i2c_state = USI_STATE_AWAITING_ACK;
+ 711               		.stabn	68,0,851,.LM97-.LFBB9
+ 712               	.LM97:
+ 713 024c 83E0      		ldi r24,lo8(3)
+ 714 024e 8093 0000 		sts usi_i2c_state,r24
+ 855:main.c        **** 				USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
+ 715               		.stabn	68,0,855,.LM98-.LFBB9
+ 716               	.LM98:
+ 717 0252 8EE4      		ldi r24,lo8(78)
+ 718               	.L69:
+ 719 0254 8EB9      		out 46-0x20,r24
+ 720 0256 00C0      		rjmp .L48
+ 721               	.L49:
+ 858:main.c        **** 				usi_i2c_awaitStart();
+ 722               		.stabn	68,0,858,.LM99-.LFBB9
+ 723               	.LM99:
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 37
+
+
+ 724 0258 00D0      		rcall usi_i2c_awaitStart
+ 725 025a 00C0      		rjmp .L48
+ 726               	.L45:
+ 863:main.c        **** 			if(!usi_i2c_readFromSlave)	//slaveRead
+ 727               		.stabn	68,0,863,.LM100-.LFBB9
+ 728               	.LM100:
+ 729 025c 8091 0000 		lds r24,usi_i2c_readFromSlave
+ 730 0260 8823      		tst r24
+ 731 0262 01F4      		brne .L51
+ 866:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
+ 732               		.stabn	68,0,866,.LM101-.LFBB9
+ 733               	.LM101:
+ 734 0264 B898      		cbi 55-0x20,0
+ 735 0266 00C0      		rjmp .L52
+ 736               	.L51:
+ 737               	.LBB19:
+ 881:main.c        **** 				masterACK = !(USIDR & 0x01);
+ 738               		.stabn	68,0,881,.LM102-.LFBB9
+ 739               	.LM102:
+ 740 0268 9FB1      		in r25,47-0x20
+ 883:main.c        **** 				if(byteNum)// && !(USIDR & 0x01))
+ 741               		.stabn	68,0,883,.LM103-.LFBB9
+ 742               	.LM103:
+ 743 026a 8091 0000 		lds r24,byteNum
+ 744 026e 8823      		tst r24
+ 745 0270 01F0      		breq .L53
+ 885:main.c        **** 					heartBlinkInternal+= 0x10;
+ 746               		.stabn	68,0,885,.LM104-.LFBB9
+ 747               	.LM104:
+ 748 0272 8091 0000 		lds r24,heartBlinkInternal
+ 749 0276 805F      		subi r24,lo8(-(16))
+ 750 0278 8093 0000 		sts heartBlinkInternal,r24
+ 751               	.L53:
+ 895:main.c        **** 				if(masterACK)
+ 752               		.stabn	68,0,895,.LM105-.LFBB9
+ 753               	.LM105:
+ 754 027c 90FD      		sbrc r25,0
+ 755 027e 00C0      		rjmp .L54
+ 756               	.LBB20:
+ 757               	.LBB21:
+1035:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
+ 758               		.stabn	68,0,1035,.LM106-.LFBB9
+ 759               	.LM106:
+ 760 0280 8091 0000 		lds r24,usi_i2c_requestedAddress
+ 761 0284 8035      		cpi r24,lo8(80)
+ 762 0286 01F4      		brne .L55
+ 763               	.LBB22:
+1037:main.c        **** 	uint8_t temp = edidArray[edidArrayIndex];
+ 764               		.stabn	68,0,1037,.LM107-.LFBB9
+ 765               	.LM107:
+ 766 0288 9091 0000 		lds r25,edidArrayIndex
+ 767 028c E92F      		mov r30,r25
+ 768 028e F0E0      		ldi r31,lo8(0)
+ 769 0290 E050      		subi r30,lo8(-(edidArray))
+ 770 0292 F040      		sbci r31,hi8(-(edidArray))
+ 771 0294 8081      		ld r24,Z
+1039:main.c        **** 	ledsControlled = FALSE;
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 38
+
+
+ 772               		.stabn	68,0,1039,.LM108-.LFBB9
+ 773               	.LM108:
+ 774 0296 1092 0000 		sts ledsControlled,__zero_reg__
+1042:main.c        **** 		incrementEDIDIndex();
+ 775               		.stabn	68,0,1042,.LM109-.LFBB9
+ 776               	.LM109:
+ 777 029a 9F5F      		subi r25,lo8(-(1))
+ 778 029c 9093 0000 		sts edidArrayIndex,r25
+ 779 02a0 9038      		cpi r25,lo8(-128)
+ 780 02a2 01F4      		brne .L68
+ 781 02a4 1092 0000 		sts edidArrayIndex,__zero_reg__
+ 782 02a8 00C0      		rjmp .L68
+ 783               	.L55:
+ 784               	.LBE22:
+1050:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
+ 785               		.stabn	68,0,1050,.LM110-.LFBB9
+ 786               	.LM110:
+ 787 02aa 8036      		cpi r24,lo8(96)
+ 788 02ac 01F4      		brne .L54
+ 789               	.LBB23:
+1052:main.c        **** 	uint8_t temp = ledState[ledIndex];
+ 790               		.stabn	68,0,1052,.LM111-.LFBB9
+ 791               	.LM111:
+ 792 02ae 9091 0000 		lds r25,ledIndex
+ 793 02b2 E92F      		mov r30,r25
+ 794 02b4 F0E0      		ldi r31,lo8(0)
+ 795 02b6 E050      		subi r30,lo8(-(ledState))
+ 796 02b8 F040      		sbci r31,hi8(-(ledState))
+ 797 02ba 8081      		ld r24,Z
+1056:main.c        **** 		incrementLEDIndex();
+ 798               		.stabn	68,0,1056,.LM112-.LFBB9
+ 799               	.LM112:
+ 800 02bc 9F5F      		subi r25,lo8(-(1))
+ 801 02be 9093 0000 		sts ledIndex,r25
+ 802 02c2 9330      		cpi r25,lo8(3)
+ 803 02c4 01F4      		brne .L68
+ 804 02c6 1092 0000 		sts ledIndex,__zero_reg__
+ 805 02ca 00C0      		rjmp .L68
+ 806               	.L54:
+ 807               	.LBE23:
+ 808               	.LBE21:
+ 809               	.LBE20:
+ 898:main.c        **** 					USIDR = 0xff;
+ 810               		.stabn	68,0,898,.LM113-.LFBB9
+ 811               	.LM113:
+ 812 02cc 8FEF      		ldi r24,lo8(-1)
+ 813               	.L68:
+ 814 02ce 8FB9      		out 47-0x20,r24
+ 904:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 815               		.stabn	68,0,904,.LM114-.LFBB9
+ 816               	.LM114:
+ 817 02d0 B89A      		sbi 55-0x20,0
+ 818               	.L52:
+ 819               	.LBE19:
+ 907:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_BYTE;
+ 820               		.stabn	68,0,907,.LM115-.LFBB9
+ 821               	.LM115:
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 39
+
+
+ 822 02d2 84E0      		ldi r24,lo8(4)
+ 823 02d4 8093 0000 		sts usi_i2c_state,r24
+ 909:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(0);
+ 824               		.stabn	68,0,909,.LM116-.LFBB9
+ 825               	.LM116:
+ 826 02d8 80E4      		ldi r24,lo8(64)
+ 827 02da 00C0      		rjmp .L69
+ 828               	.L74:
+ 913:main.c        **** 			byteNum++;
+ 829               		.stabn	68,0,913,.LM117-.LFBB9
+ 830               	.LM117:
+ 831 02dc 9091 0000 		lds r25,byteNum
+ 832 02e0 9F5F      		subi r25,lo8(-(1))
+ 833 02e2 9093 0000 		sts byteNum,r25
+ 915:main.c        **** 			if(!usi_i2c_readFromSlave)
+ 834               		.stabn	68,0,915,.LM118-.LFBB9
+ 835               	.LM118:
+ 836 02e6 8091 0000 		lds r24,usi_i2c_readFromSlave
+ 837 02ea 8823      		tst r24
+ 838 02ec 01F4      		brne .L59
+ 917:main.c        **** 				processReceivedByte(USIDR, byteNum);
+ 839               		.stabn	68,0,917,.LM119-.LFBB9
+ 840               	.LM119:
+ 841 02ee 8FB1      		in r24,47-0x20
+ 842               	.LBB24:
+ 843               	.LBB25:
+ 994:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
+ 844               		.stabn	68,0,994,.LM120-.LFBB9
+ 845               	.LM120:
+ 846 02f0 2091 0000 		lds r18,usi_i2c_requestedAddress
+ 847 02f4 2035      		cpi r18,lo8(80)
+ 848 02f6 01F4      		brne .L60
+ 996:main.c        **** 	if(byteNum == 1)
+ 849               		.stabn	68,0,996,.LM121-.LFBB9
+ 850               	.LM121:
+ 851 02f8 9130      		cpi r25,lo8(1)
+ 852 02fa 01F4      		brne .L61
+1000:main.c        **** 		setEDIDIndex(receivedByte);
+ 853               		.stabn	68,0,1000,.LM122-.LFBB9
+ 854               	.LM122:
+ 855 02fc 8F77      		andi r24,lo8(127)
+ 856 02fe 8093 0000 		sts edidArrayIndex,r24
+ 857 0302 00C0      		rjmp .L62
+ 858               	.L61:
+1005:main.c        **** 		edidArray[edidArrayIndex] = receivedByte;
+ 859               		.stabn	68,0,1005,.LM123-.LFBB9
+ 860               	.LM123:
+ 861 0304 9091 0000 		lds r25,edidArrayIndex
+ 862 0308 E92F      		mov r30,r25
+ 863 030a F0E0      		ldi r31,lo8(0)
+ 864 030c E050      		subi r30,lo8(-(edidArray))
+ 865 030e F040      		sbci r31,hi8(-(edidArray))
+ 866 0310 8083      		st Z,r24
+1007:main.c        **** 		incrementEDIDIndex();
+ 867               		.stabn	68,0,1007,.LM124-.LFBB9
+ 868               	.LM124:
+ 869 0312 892F      		mov r24,r25
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 40
+
+
+ 870 0314 8F5F      		subi r24,lo8(-(1))
+ 871 0316 8093 0000 		sts edidArrayIndex,r24
+ 872 031a 8038      		cpi r24,lo8(-128)
+ 873 031c 01F4      		brne .L62
+ 874 031e 1092 0000 		sts edidArrayIndex,__zero_reg__
+ 875 0322 00C0      		rjmp .L62
+ 876               	.L60:
+1012:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
+ 877               		.stabn	68,0,1012,.LM125-.LFBB9
+ 878               	.LM125:
+ 879 0324 2036      		cpi r18,lo8(96)
+ 880 0326 01F4      		brne .L62
+1015:main.c        **** 	ledsControlled = TRUE;
+ 881               		.stabn	68,0,1015,.LM126-.LFBB9
+ 882               	.LM126:
+ 883 0328 21E0      		ldi r18,lo8(1)
+ 884 032a 2093 0000 		sts ledsControlled,r18
+1017:main.c        **** 	if(byteNum == 1)
+ 885               		.stabn	68,0,1017,.LM127-.LFBB9
+ 886               	.LM127:
+ 887 032e 9130      		cpi r25,lo8(1)
+ 888 0330 01F4      		brne .L63
+1019:main.c        **** 		setLEDIndex(receivedByte);
+ 889               		.stabn	68,0,1019,.LM128-.LFBB9
+ 890               	.LM128:
+ 891 0332 63E0      		ldi r22,lo8(3)
+ 892 0334 00D0      		rcall __udivmodqi4
+ 893 0336 9093 0000 		sts ledIndex,r25
+ 894 033a 00C0      		rjmp .L62
+ 895               	.L63:
+1023:main.c        **** 		ledState[ledIndex] = receivedByte;
+ 896               		.stabn	68,0,1023,.LM129-.LFBB9
+ 897               	.LM129:
+ 898 033c 9091 0000 		lds r25,ledIndex
+ 899 0340 E92F      		mov r30,r25
+ 900 0342 F0E0      		ldi r31,lo8(0)
+ 901 0344 E050      		subi r30,lo8(-(ledState))
+ 902 0346 F040      		sbci r31,hi8(-(ledState))
+ 903 0348 8083      		st Z,r24
+1024:main.c        **** 		incrementLEDIndex();
+ 904               		.stabn	68,0,1024,.LM130-.LFBB9
+ 905               	.LM130:
+ 906 034a 892F      		mov r24,r25
+ 907 034c 8F5F      		subi r24,lo8(-(1))
+ 908 034e 8093 0000 		sts ledIndex,r24
+ 909 0352 8330      		cpi r24,lo8(3)
+ 910 0354 01F4      		brne .L62
+ 911 0356 1092 0000 		sts ledIndex,__zero_reg__
+ 912               	.L62:
+ 913               	.LBE25:
+ 914               	.LBE24:
+ 919:main.c        **** 				heartBlinkInternal = usi_i2c_receivedByte;
+ 915               		.stabn	68,0,919,.LM131-.LFBB9
+ 916               	.LM131:
+ 917 035a 8091 0000 		lds r24,usi_i2c_receivedByte
+ 918 035e 8093 0000 		sts heartBlinkInternal,r24
+ 924:main.c        **** 				USIDR = 0x3f;
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 41
+
+
+ 919               		.stabn	68,0,924,.LM132-.LFBB9
+ 920               	.LM132:
+ 921 0362 8FE3      		ldi r24,lo8(63)
+ 922 0364 8FB9      		out 47-0x20,r24
+ 925:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 923               		.stabn	68,0,925,.LM133-.LFBB9
+ 924               	.LM133:
+ 925 0366 B89A      		sbi 55-0x20,0
+ 926 0368 00C0      		rjmp .L64
+ 927               	.L59:
+ 930:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
+ 928               		.stabn	68,0,930,.LM134-.LFBB9
+ 929               	.LM134:
+ 930 036a B898      		cbi 55-0x20,0
+ 931:main.c        **** 				USIDR = 0xff;
+ 931               		.stabn	68,0,931,.LM135-.LFBB9
+ 932               	.LM135:
+ 933 036c 8FEF      		ldi r24,lo8(-1)
+ 934 036e 8FB9      		out 47-0x20,r24
+ 935               	.L64:
+ 936:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
+ 936               		.stabn	68,0,936,.LM136-.LFBB9
+ 937               	.LM136:
+ 938 0370 8EE4      		ldi r24,lo8(78)
+ 939 0372 8EB9      		out 46-0x20,r24
+ 938:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ACK;
+ 940               		.stabn	68,0,938,.LM137-.LFBB9
+ 941               	.LM137:
+ 942 0374 83E0      		ldi r24,lo8(3)
+ 943 0376 00C0      		rjmp .L70
+ 944               	.L42:
+ 943:main.c        **** 			usi_i2c_state = 0x77;
+ 945               		.stabn	68,0,943,.LM138-.LFBB9
+ 946               	.LM138:
+ 947 0378 87E7      		ldi r24,lo8(119)
+ 948               	.L70:
+ 949 037a 8093 0000 		sts usi_i2c_state,r24
+ 950               	.L48:
+ 951               	.LBE18:
+ 950:main.c        **** 	if((usi_i2c_readFromSlave)
+ 952               		.stabn	68,0,950,.LM139-.LFBB9
+ 953               	.LM139:
+ 954 037e 8091 0000 		lds r24,usi_i2c_readFromSlave
+ 955 0382 8823      		tst r24
+ 956 0384 01F0      		breq .L66
+ 957 0386 8091 0000 		lds r24,usi_i2c_state
+ 958 038a 8430      		cpi r24,lo8(4)
+ 959 038c 01F4      		brne .L66
+ 960 038e 8091 0000 		lds r24,usi_i2c_requestedAddress
+ 961 0392 8035      		cpi r24,lo8(80)
+ 962 0394 01F4      		brne .L66
+ 953:main.c        **** 		set_heartBlink(0);
+ 963               		.stabn	68,0,953,.LM140-.LFBB9
+ 964               	.LM140:
+ 965 0396 80E0      		ldi r24,lo8(0)
+ 966 0398 00D0      		rcall set_heartBlink
+ 967               	.L66:
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 42
+
+
+ 968               	/* epilogue start */
+ 955:main.c        **** }
+ 969               		.stabn	68,0,955,.LM141-.LFBB9
+ 970               	.LM141:
+ 971 039a FF91      		pop r31
+ 972 039c EF91      		pop r30
+ 973 039e BF91      		pop r27
+ 974 03a0 AF91      		pop r26
+ 975 03a2 9F91      		pop r25
+ 976 03a4 8F91      		pop r24
+ 977 03a6 7F91      		pop r23
+ 978 03a8 6F91      		pop r22
+ 979 03aa 5F91      		pop r21
+ 980 03ac 4F91      		pop r20
+ 981 03ae 3F91      		pop r19
+ 982 03b0 2F91      		pop r18
+ 983 03b2 0F90      		pop r0
+ 984 03b4 0FBE      		out __SREG__,r0
+ 985 03b6 0F90      		pop r0
+ 986 03b8 1F90      		pop __zero_reg__
+ 987 03ba 1895      		reti
+ 988               		.size	__vector_14, .-__vector_14
+ 989               		.stabs	"udrTemp:r(3,2)",64,0,827,24
+ 990               		.stabn	192,0,0,.LBB18-.LFBB9
+ 991               		.stabs	"temp:r(3,2)",64,0,1037,24
+ 992               		.stabn	192,0,0,.LBB22-.LFBB9
+ 993               		.stabn	224,0,0,.LBE22-.LFBB9
+ 994               		.stabn	224,0,0,.LBE18-.LFBB9
+ 995               	.Lscope9:
+ 996               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 997               		.stabd	78,0,0
+ 998               	.global	header
+ 999               		.section	.progmem.data,"a",@progbits
+ 1000               		.type	header, @object
+ 1001               		.size	header, 32
+ 1002               	header:
+ 1003 0000 4C43 4472 		.string	"LCDreIDer50 2013-12-23 03:31:39"
+ 1003      6549 4465 
+ 1003      7235 3020 
+ 1003      3230 3133 
+ 1003      2D31 322D 
+ 1004               	.global	ledState
+ 1005               	.global	ledState
+ 1006               		.section .bss
+ 1007               		.type	ledState, @object
+ 1008               		.size	ledState, 3
+ 1009               	ledState:
+ 1010 0000 0000 00   		.skip 3,0
+ 1011               	.global	ledIndex
+ 1012               	.global	ledIndex
+ 1013               		.type	ledIndex, @object
+ 1014               		.size	ledIndex, 1
+ 1015               	ledIndex:
+ 1016 0003 00        		.skip 1,0
+ 1017               	.global	edidArray
+ 1018               		.data
+ 1019               		.type	edidArray, @object
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 43
+
+
+ 1020               		.size	edidArray, 128
+ 1021               	edidArray:
+ 1022 0000 00        		.byte	0
+ 1023 0001 FF        		.byte	-1
+ 1024 0002 FF        		.byte	-1
+ 1025 0003 FF        		.byte	-1
+ 1026 0004 FF        		.byte	-1
+ 1027 0005 FF        		.byte	-1
+ 1028 0006 FF        		.byte	-1
+ 1029 0007 00        		.byte	0
+ 1030 0008 34        		.byte	52
+ 1031 0009 A8        		.byte	-88
+ 1032 000a 50        		.byte	80
+ 1033 000b 01        		.byte	1
+ 1034 000c 00        		.byte	0
+ 1035 000d 00        		.byte	0
+ 1036 000e 00        		.byte	0
+ 1037 000f 00        		.byte	0
+ 1038 0010 00        		.byte	0
+ 1039 0011 17        		.byte	23
+ 1040 0012 01        		.byte	1
+ 1041 0013 03        		.byte	3
+ 1042 0014 80        		.byte	-128
+ 1043 0015 19        		.byte	25
+ 1044 0016 12        		.byte	18
+ 1045 0017 78        		.byte	120
+ 1046 0018 0A        		.byte	10
+ 1047 0019 AF        		.byte	-81
+ 1048 001a 40        		.byte	64
+ 1049 001b 95        		.byte	-107
+ 1050 001c 56        		.byte	86
+ 1051 001d 4A        		.byte	74
+ 1052 001e 8F        		.byte	-113
+ 1053 001f 25        		.byte	37
+ 1054 0020 20        		.byte	32
+ 1055 0021 50        		.byte	80
+ 1056 0022 54        		.byte	84
+ 1057 0023 00        		.byte	0
+ 1058 0024 00        		.byte	0
+ 1059 0025 00        		.byte	0
+ 1060 0026 01        		.byte	1
+ 1061 0027 01        		.byte	1
+ 1062 0028 01        		.byte	1
+ 1063 0029 01        		.byte	1
+ 1064 002a 01        		.byte	1
+ 1065 002b 01        		.byte	1
+ 1066 002c 01        		.byte	1
+ 1067 002d 01        		.byte	1
+ 1068 002e 01        		.byte	1
+ 1069 002f 01        		.byte	1
+ 1070 0030 01        		.byte	1
+ 1071 0031 01        		.byte	1
+ 1072 0032 01        		.byte	1
+ 1073 0033 01        		.byte	1
+ 1074 0034 01        		.byte	1
+ 1075 0035 01        		.byte	1
+ 1076 0036 10        		.byte	16
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 44
+
+
+ 1077 0037 27        		.byte	39
+ 1078 0038 78        		.byte	120
+ 1079 0039 98        		.byte	-104
+ 1080 003a 50        		.byte	80
+ 1081 003b 1A        		.byte	26
+ 1082 003c 08        		.byte	8
+ 1083 003d 40        		.byte	64
+ 1084 003e 10        		.byte	16
+ 1085 003f 10        		.byte	16
+ 1086 0040 02        		.byte	2
+ 1087 0041 00        		.byte	0
+ 1088 0042 F5        		.byte	-11
+ 1089 0043 B8        		.byte	-72
+ 1090 0044 00        		.byte	0
+ 1091 0045 00        		.byte	0
+ 1092 0046 00        		.byte	0
+ 1093 0047 18        		.byte	24
+ 1094 0048 00        		.byte	0
+ 1095 0049 00        		.byte	0
+ 1096 004a 00        		.byte	0
+ 1097 004b 10        		.byte	16
+ 1098 004c 00        		.byte	0
+ 1099 004d 00        		.byte	0
+ 1100 004e 00        		.byte	0
+ 1101 004f 00        		.byte	0
+ 1102 0050 00        		.byte	0
+ 1103 0051 00        		.byte	0
+ 1104 0052 00        		.byte	0
+ 1105 0053 00        		.byte	0
+ 1106 0054 00        		.byte	0
+ 1107 0055 00        		.byte	0
+ 1108 0056 00        		.byte	0
+ 1109 0057 00        		.byte	0
+ 1110 0058 00        		.byte	0
+ 1111 0059 00        		.byte	0
+ 1112 005a 00        		.byte	0
+ 1113 005b 00        		.byte	0
+ 1114 005c 00        		.byte	0
+ 1115 005d 10        		.byte	16
+ 1116 005e 00        		.byte	0
+ 1117 005f 00        		.byte	0
+ 1118 0060 00        		.byte	0
+ 1119 0061 00        		.byte	0
+ 1120 0062 00        		.byte	0
+ 1121 0063 00        		.byte	0
+ 1122 0064 00        		.byte	0
+ 1123 0065 00        		.byte	0
+ 1124 0066 00        		.byte	0
+ 1125 0067 00        		.byte	0
+ 1126 0068 00        		.byte	0
+ 1127 0069 00        		.byte	0
+ 1128 006a 00        		.byte	0
+ 1129 006b 00        		.byte	0
+ 1130 006c 00        		.byte	0
+ 1131 006d 00        		.byte	0
+ 1132 006e 00        		.byte	0
+ 1133 006f FC        		.byte	-4
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 45
+
+
+ 1134 0070 00        		.byte	0
+ 1135 0071 6D        		.byte	109
+ 1136 0072 65        		.byte	101
+ 1137 0073 68        		.byte	104
+ 1138 0074 4C        		.byte	76
+ 1139 0075 54        		.byte	84
+ 1140 0076 44        		.byte	68
+ 1141 0077 31        		.byte	49
+ 1142 0078 32        		.byte	50
+ 1143 0079 31        		.byte	49
+ 1144 007a 4B        		.byte	75
+ 1145 007b 4D        		.byte	77
+ 1146 007c 37        		.byte	55
+ 1147 007d 4B        		.byte	75
+ 1148 007e 00        		.byte	0
+ 1149 007f 75        		.byte	117
+ 1150               	.global	edidArrayIndex
+ 1151               	.global	edidArrayIndex
+ 1152               		.section .bss
+ 1153               		.type	edidArrayIndex, @object
+ 1154               		.size	edidArrayIndex, 1
+ 1155               	edidArrayIndex:
+ 1156 0004 00        		.skip 1,0
+ 1157               	.global	usi_i2c_byteToTransmit
+ 1158               		.data
+ 1159               		.type	usi_i2c_byteToTransmit, @object
+ 1160               		.size	usi_i2c_byteToTransmit, 1
+ 1161               	usi_i2c_byteToTransmit:
+ 1162 0080 FF        		.byte	-1
+ 1163               	.global	usi_i2c_state
+ 1164               	.global	usi_i2c_state
+ 1165               		.section .bss
+ 1166               		.type	usi_i2c_state, @object
+ 1167               		.size	usi_i2c_state, 1
+ 1168               	usi_i2c_state:
+ 1169 0005 00        		.skip 1,0
+ 1170               	.global	usi_i2c_readFromSlave
+ 1171               	.global	usi_i2c_readFromSlave
+ 1172               		.type	usi_i2c_readFromSlave, @object
+ 1173               		.size	usi_i2c_readFromSlave, 1
+ 1174               	usi_i2c_readFromSlave:
+ 1175 0006 00        		.skip 1,0
+ 1176               	.global	usi_i2c_requestedAddres
+ 1177               	.global	usi_i2c_requestedAddres
+ 1178               		.type	usi_i2c_requestedAddres, @object
+ 1179               		.size	usi_i2c_requestedAddres, 1
+ 1180               	usi_i2c_requestedAddres:
+ 1181 0007 00        		.skip 1,0
+ 1182               	.global	usi_i2c_receivedByte
+ 1183               	.global	usi_i2c_receivedByte
+ 1184               		.type	usi_i2c_receivedByte, @object
+ 1185               		.size	usi_i2c_receivedByte, 1
+ 1186               	usi_i2c_receivedByte:
+ 1187 0008 00        		.skip 1,0
+ 1188               	.global	heartBlinkInternal
+ 1189               	.global	heartBlinkInternal
+ 1190               		.type	heartBlinkInternal, @object
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 46
+
+
+ 1191               		.size	heartBlinkInternal, 1
+ 1192               	heartBlinkInternal:
+ 1193 0009 00        		.skip 1,0
+ 1194               	.global	usi_i2c_requestedAddress
+ 1195               	.global	usi_i2c_requestedAddress
+ 1196               		.type	usi_i2c_requestedAddress, @object
+ 1197               		.size	usi_i2c_requestedAddress, 1
+ 1198               	usi_i2c_requestedAddress:
+ 1199 000a 00        		.skip 1,0
+ 1200               	.global	byteNum
+ 1201               	.global	byteNum
+ 1202               		.type	byteNum, @object
+ 1203               		.size	byteNum, 1
+ 1204               	byteNum:
+ 1205 000b 00        		.skip 1,0
+ 1206               	.global	ledsControlled
+ 1207               	.global	ledsControlled
+ 1208               		.type	ledsControlled, @object
+ 1209               		.size	ledsControlled, 1
+ 1210               	ledsControlled:
+ 1211 000c 00        		.skip 1,0
+ 1212               		.lcomm lastState.1732,3
+ 1213               		.data
+ 1214               		.type	theta.1693, @object
+ 1215               		.size	theta.1693, 2
+ 1216               	theta.1693:
+ 1217 0081 0200      		.word	2
+ 1218               		.lcomm delay.1692,1
+ 1219               		.comm ledHFM,12,1
+ 1220               		.stabs	"header:G(0,18)=ar(0,17);0;31;(3,2)",32,0,16,0
+ 1221               		.stabs	"ledState:G(0,19)=ar(0,17);0;2;(0,20)=B(3,2)",32,0,157,0
+ 1222               		.stabs	"ledIndex:G(3,2)",32,0,158,0
+ 1223               		.stabs	"edidArray:G(0,21)=ar(0,17);0;127;(3,2)",32,0,166,0
+ 1224               		.stabs	"edidArrayIndex:G(3,2)",32,0,574,0
+ 1225               		.stabs	"usi_i2c_byteToTransmit:G(3,2)",32,0,606,0
+ 1226               		.stabs	"usi_i2c_state:G(3,2)",32,0,607,0
+ 1227               		.stabs	"usi_i2c_readFromSlave:G(3,2)",32,0,608,0
+ 1228               		.stabs	"usi_i2c_requestedAddres:G(3,2)",32,0,609,0
+ 1229               		.stabs	"usi_i2c_receivedByte:G(3,2)",32,0,610,0
+ 1230               		.stabs	"heartBlinkInternal:G(3,2)",32,0,716,0
+ 1231               		.stabs	"usi_i2c_requestedAddress:G(3,2)",32,0,773,0
+ 1232               		.stabs	"byteNum:G(3,2)",32,0,775,0
+ 1233               		.stabs	"ledsControlled:G(3,2)",32,0,957,0
+ 1234               		.stabs	"ledHFM:G(0,22)=ar(0,17);0;2;(8,2)",32,0,1096,0
+ 1235               		.text
+ 1236               		.stabs	"",100,0,0,.Letext0
+ 1237               	.Letext0:
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s 			page 47
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:2      *ABS*:0000003f __SREG__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:3      *ABS*:0000003e __SP_H__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:4      *ABS*:0000003d __SP_L__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:5      *ABS*:00000000 __tmp_reg__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:6      *ABS*:00000001 __zero_reg__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:105    .text:00000000 usi_i2c_awaitStart
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1168   .bss:00000005 usi_i2c_state
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:146    .text:00000016 usi_i2c_awaitStartSCL
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:180    .text:0000002a usi_i2c_slaveInit
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:201    .text:0000002e __vector_13
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1192   .bss:00000009 heartBlinkInternal
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:261    .text:00000066 edid_checkSummer
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1021   .data:00000000 edidArray
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:304    .text:00000080 updateLEDs
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1009   .bss:00000000 ledState
+                             .bss:0000000d lastState.1732
+                            *COM*:0000000c ledHFM
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:413    .text:000000f0 updateLEDFader
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1212   .bss:00000010 delay.1692
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1216   .data:00000081 theta.1693
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:538    .text:00000194 main
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1210   .bss:0000000c ledsControlled
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:630    .text:000001e0 __vector_14
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1204   .bss:0000000b byteNum
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1174   .bss:00000006 usi_i2c_readFromSlave
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1198   .bss:0000000a usi_i2c_requestedAddress
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1155   .bss:00000004 edidArrayIndex
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1015   .bss:00000003 ledIndex
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1186   .bss:00000008 usi_i2c_receivedByte
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1002   .progmem.data:00000000 header
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1161   .data:00000080 usi_i2c_byteToTransmit
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccS0SOCB.s:1180   .bss:00000007 usi_i2c_requestedAddres
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+hfm_setPower
+hfm_nextOutput
+sineRaw8
+hfm_setup
+init_heartBeat
+setHeartRate
+heartBlink
+heartUpdate
+__udivmodqi4
+set_heartBlink

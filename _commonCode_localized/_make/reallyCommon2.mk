@@ -2,6 +2,9 @@
 
 # Changing over from reallyCommon to reallyCommon2:
 #  Add to makefile: (Uncomment indented commentted lines)
+# (If using an AVR, definitely look into copying a code-block from there,
+# as well, regarding PRINTF and STDIO and code-size)
+
 #  This goes roughly after COMDIR=...
 ################# SHOULD NOT CHANGE THIS BLOCK... FROM HERE ############## 
 #                                                                        #
@@ -500,10 +503,42 @@ RSYNCABLE_COMMON_STUFF := \
 
 
 
+# This is a target-specific variable... 
+# Personally, I think this is confusing, as it looks like a target
 
+###############
+# Added a/o LCDrevisited2012-27, in order to figure out who was calling
+# stdio (and thus, why vfprintf was being compiled-in)
+# Turns out stdio *wasn't* called, but there was an LDFLAG...
+#   (see avrCommon.mk for more details)
+#
+#'make includes':
+#	This is pretty hokily-implemented...
+#  Best idea: 'make clean' first, then 'make includes'
+#  this will create .o files in _BUILD, and its subdirs, that contain
+#  a list of the #includes...
+#
+#  then you can e.g. 'grep -r stdio.h _BUILD/*'
+#  or 'find ./_BUILD/ -name \*.o -exec cat {} \;'
+#
+#  Be sure to run 'make clean' after you're done.
+#
+#  Note that includesMessage never runs because the build fails when trying
+#  to create the final output-file since the object-files are not actually 
+#  compiled code. 
+#  That's just how this is currently implemented
+#
+includes: ALL_CFLAGS += -M
 
+.PHONY: includes
+includes: $(TARGETS) includesMessage
 
-
+.PHONY: includesMessage
+includesMessage:
+	@echo ""
+	@echo "includes-lists have been placed in .o files under _BUILD"
+#
+###############
 
 
 #BACKUP_DIR = "backup_$(MCU)_$(shell date '+%Y-%m-%d_%H.%M.%S')"
@@ -757,6 +792,9 @@ list:
 	@echo ""
 	@echo "ALL_CFLAGS="
 	@echo $(ALL_CFLAGS)
+	@echo ""
+	@echo "LDFLAGS="
+	@echo $(LDFLAGS)
 	@echo ""
 	@echo "COM_MAKE="
 	@echo $(COM_MAKE)

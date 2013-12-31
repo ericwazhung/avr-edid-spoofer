@@ -1,4 +1,4 @@
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 1
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 1
 
 
    1               		.file	"dmsTimer.c"
@@ -9,7 +9,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
    6               	__zero_reg__ = 1
    7               		.global __do_copy_data
    8               		.global __do_clear_bss
-   9               		.stabs	"/Users/meh/_avrProjects/LCDreIDer/50-gittifying/",100,0,2,.Ltext0
+   9               		.stabs	"/Users/meh/_avrProjects/LCDreIDer/51-lowerRefresh/",100,0,2,.Ltext0
   10               		.stabs	"_commonCode_localized/dmsTimer/1.13/dmsTimer.c",100,0,2,.Ltext0
   11               		.text
   12               	.Ltext0:
@@ -58,7 +58,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
   55               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,238,0
   56               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,246,0
   57               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,253,0
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 2
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 2
 
 
   58               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,273,0
@@ -118,7 +118,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
   31:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** // MOST externalUpdate-specific code is now in dmsExternal.c
   32:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** // SEE dmsTimer.h for its -> inclusion <-
   33:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** xyt_t dmsLine;
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 3
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 3
 
 
   34:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
@@ -178,7 +178,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  113 003a AF91      		pop r26
  114 003c 9F91      		pop r25
  115 003e 8F91      		pop r24
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 4
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 4
 
 
  116 0040 0F90      		pop r0
@@ -238,7 +238,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
   95:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** // C
   96:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** //int DoIt  (float a, char b, char c){ printf("DoIt\n");   return a+b+c; }
   97:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** //int DoMore(float a, char b, char c)const{ printf("DoMore\n"); return a-b+c; }
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 5
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 5
 
 
   98:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
@@ -298,7 +298,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  132:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 			(*p_waitFn)();
  133:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		}
  134:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 6
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 6
 
 
  135:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	}
@@ -358,7 +358,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  189:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** //#elif defined(__COMPILING_AVR_LIBC__)
  190:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #if defined(__AVR_ARCH__)
  191:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	dms4day_t time;
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 7
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 7
 
 
  192:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
@@ -418,7 +418,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  177               	.LBE6:
  109:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	while(dmsGetTime() - startTime < time)
  178               		.stabn	68,0,109,.LM8-.LFBB2
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 8
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 8
 
 
  179               	.LM8:
@@ -478,7 +478,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  227 00ae A007      		cpc r26,r16
  228 00b0 B107      		cpc r27,r17
  229 00b2 00F0      		brlo .L5
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 9
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 9
 
 
  230               	/* epilogue start */
@@ -538,7 +538,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  279               	.LM21:
  280               	/* #APP */
  281               	 ;  220 "_commonCode_localized/dmsTimer/1.13/dmsTimer.c" 1
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 10
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 10
 
 
  282 00e2 7894      		sei
@@ -598,7 +598,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  249:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	return (uint8_t)((uint16_t)(dmsFrac) * (uint16_t)100  / (uint16_t)dmsNumUpdates);
  308               		.stabn	68,0,249,.LM24-.LFBB4
  309               	.LM24:
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 11
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 11
 
 
  310 00ea 8091 0000 		lds r24,dmsFrac
@@ -658,7 +658,7 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  357 011a 00D0      		rcall timer_selectDivisor
   85:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	timer_compareMatchIntEnable(0, OUT_CHANNELA);
  358               		.stabn	68,0,85,.LM32-.LFBB5
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 12
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 12
 
 
  359               	.LM32:
@@ -707,25 +707,25 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			pag
  401               		.text
  402               		.stabs	"",100,0,0,.Letext0
  403               	.Letext0:
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s 			page 13
+GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 dmsTimer.c
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:2      *ABS*:0000003f __SREG__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:3      *ABS*:0000003e __SP_H__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:4      *ABS*:0000003d __SP_L__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:5      *ABS*:00000000 __tmp_reg__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:6      *ABS*:00000001 __zero_reg__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:80     .text:00000000 __vector_10
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:377    .bss:00000000 dmsCount
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:130    .text:0000004a dmsWaitFn
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:395    .bss:00000004 dmsFrac
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:254    .text:000000ca dmsGetTime
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:301    .text:000000ea dmsGetFrac
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:383    .data:00000000 dmsNumUpdates
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:330    .text:00000102 init_dmsTimer
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmsTWAI.s:388    .data:00000001 dmsIncrementSize
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:2      *ABS*:0000003f __SREG__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:3      *ABS*:0000003e __SP_H__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:4      *ABS*:0000003d __SP_L__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:5      *ABS*:00000000 __tmp_reg__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:6      *ABS*:00000001 __zero_reg__
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:80     .text:00000000 __vector_10
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:377    .bss:00000000 dmsCount
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:130    .text:0000004a dmsWaitFn
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:395    .bss:00000004 dmsFrac
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:254    .text:000000ca dmsGetTime
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:301    .text:000000ea dmsGetFrac
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:383    .data:00000000 dmsNumUpdates
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:330    .text:00000102 init_dmsTimer
+/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccmILaIy.s:388    .data:00000001 dmsIncrementSize
 
 UNDEFINED SYMBOLS
 __do_copy_data

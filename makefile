@@ -23,6 +23,36 @@ CFLAGS += -D'PROJINFO_SHORT=TRUE'
 #endif
 
 
+#THE ABOVE is now handled via these options:
+# Only one is paid-attention-to, in decreasing priority...
+AVR_NO_STDIO = TRUE
+#AVR_MIN_PRINTF = TRUE
+#AVR_FLOAT_PRINTF = TRUE
+# NOTE that if AVR_NO_STDIO is true AND you make no reference to stdio.h
+# anywhere in your code, or its dependencies...
+# Then code-size should be smaller than choosing MIN_PRINTF, because
+# vfprintf will not be linked in at all
+# HOWEVER: If AVR_NO_STDIO is TRUE  AND stdio.h is referenced (maybe by
+# mistake?) then code-size will be *larger* than having chosen MIN_PRINTF
+# It's confusing and hokey.
+# See also _commonCode/_make/avrCommon.mk
+# Example a/o LCDrevisited2012-27:
+# stdio.h is not referenced anywhere
+# with AVR_MIN_PRINTF=TRUE, codesize is 8020 Bytes
+# with AVR_NO_STDIO=TRUE, codesize is 7048 Bytes
+# That's nearly 1/8th of the codeSpace, or 1KB, taken up by functions 
+# that're never used! (e.g. vfprintf was linking-in)
+# (Previously, LDFLAGS was set as in AVR_MIN_PRINTF as a default, in
+# avrCommon.mk)
+# with AVR_FLOAT_PRINTF=TRUE, codesize overflows by 1664 Bytes.
+# so that's... 9856 Bytes
+
+
+
+
+
+
+
 # Probably best not to enable the WDT while testing/debugging!
 WDT_DISABLE = TRUE
 	PROJ_OPT_HDR += WDT_DIS=$(WDT_DISABLE)

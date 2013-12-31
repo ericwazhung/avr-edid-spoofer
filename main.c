@@ -1,18 +1,16 @@
 #include "projInfo.h"	//Don't include in main.h 'cause that's included in other .c's?
 #include "main.h"
 
-//#include _USI_UART_HEADER_
-//#include _UART_IN_HEADER_
-#include _SINETABLE_HEADER_
-//#include _MULTDIV64_HEADER_
-//#include _GOERTZ_HEADER_
-//#include <util/delay.h>	//for delay_us in initializing the PLL...
-//#include <stdio.h> //for sprintf
-
-
 
 //Need to save memory space for the Tiny45...
+// (Actually, now it fits.
+//  FADER just uses the three remaining pins to cyclicly fade three LEDs
+//  You can just ignore/disable it.)
 #define FADER_ENABLED TRUE //FALSE
+
+#if (defined(FADER_ENABLED) && FADER_ENABLED)
+#include _SINETABLE_HEADER_
+#endif
 
 
 //For hacking when connected in single-pix mode
@@ -31,21 +29,85 @@
 #define PIX_CLK_GPU	(100000000UL)
 
 #define H_ACTIVE_GPU	(1400)		//Active pixels
-#define H_FP_GPU		(16)			//Front Porch
-#define H_WIDTH_GPU	(16)			//Sync Width
-#define H_BP_GPU		(120)			//Back Porch
+#define H_FP_GPU		(32)			//Front Porch
+#define H_WIDTH_GPU	(32)			//Sync Width
+#define H_BP_GPU		(160)			//Back Porch
 //a/o v48:
 //Oddly, 16,16,64 worked with SwitchResX, but *here* they caused a
 // horizontal shift... 120 seems to have fixed it.
 // It could be that the display was already properly-synced from a
 // different timing, then switching to the new timing allowed it to remain
 // synced. Or maybe I've got some integer-rounding in here...? I dunno.
-
+//a/o v51:
+// 16,16,120 seems to work, but every once in a while I see a glitch in
+// terminal (sharp contrast, I guess)
 
 #define V_ACTIVE_GPU	(1050)		//Active Rows
 #define V_FP_GPU		(0)			//Front Porch
 #define V_WIDTH_GPU	(2)			//Sync Rows
 #define V_BP_GPU		(6)			//Back Porch
+
+
+
+//If you want to have alternate-timings available, set this TRUE and enter
+//the alternate-values below.
+#define ALT_TIMING	TRUE
+
+
+
+#if (defined(ALT_TIMING) && ALT_TIMING)
+// According to spwg, there's room for at least one "alternate timing"
+// This could be useful here, for saving a couple values to try-out...
+// e.g. 57Hz refresh worked perfectly, as far as I could tell, but I wanted
+// to see if I could bump that up... 60Hz looked great, until I was working
+// in Terminal (lots of contrast), and I noticed a few lines would skip...
+// Hopefully, if this works, having an alternate-timing of the
+// previously-working values will make switching back easy...
+// Haven't yet figured out how I'm going to implement this...
+// Alternate-timing kinda makes sense as the reliable fall-back
+// OTOH, if the main timing is set to something non-bootable, then what?
+// (If the experimental timing is put here in ALT_TIMING, then it could be
+// tested *after* booting with reliable values... OTOH, I've *also* found
+// that (maybe) the display itself has a better time syncing if it'd
+// already synced since power-up... so switching to a new (questionable)
+// value may work after the system has booted, but may not work upon a
+// fresh boot... 
+
+// Anyways, these are the same macro-names as above, just with _ALT.
+
+#define PIX_CLK_GPU_ALT	(100000000UL)
+
+//These values are for a 57Hz refresh
+#define H_ACTIVE_GPU_ALT	(1400)		//Active pixels
+#define H_FP_GPU_ALT			(32)			//Front Porch
+#define H_WIDTH_GPU_ALT		(32)			//Sync Width
+#define H_BP_GPU_ALT			(180)			//Back Porch
+
+#define V_ACTIVE_GPU_ALT	(1050)		//Active Rows
+#define V_FP_GPU_ALT			(2)			//Front Porch
+#define V_WIDTH_GPU_ALT		(2)			//Sync Rows
+#define V_BP_GPU_ALT 		(6)			//Back Porch
+
+//a/o v51:
+//These are values used in the actual EDID array...
+// This avoids all single-to-dual translation, etc. that makes 
+// it complicated to figure out where the NON-ALT values come from...
+// (that stuff is, again, remnants of an older time, not relevent to most
+// purposes)
+#define H_BLANKING_ALT (H_FP_GPU_ALT + H_WIDTH_GPU_ALT + H_BP_GPU_ALT)
+#define V_BLANKING_ALT (V_FP_GPU_ALT + V_WIDTH_GPU_ALT + V_BP_GPU_ALT)
+
+#endif
+
+
+//Currently, neither of these values can be greater than 255
+// it should be a simple change.
+#define H_IMAGE_SIZE_MM_LTD   245L
+#define V_IMAGE_SIZE_MM_LTD	184L
+
+
+
+
 
 
 //These are dual-pixel frequencies...
@@ -60,9 +122,53 @@
 //#define PIX_CLK_OVERRIDE (42500000L)
 // As Of v47: 100MHz works, 104 causes jitter... (tested in SwitchResX)
 
-#define PIX_CLK_OVERRIDE (PIX_CLK_GPU/2) //(50000000L)
 
-#define H_IMAGE_SIZE_MM_LTD   245L
+//a/o v51: There've been some unusual testing in here...
+//         e.g. one of the first experiments was to use a dual-pixel
+//         display *directly* with the single-pixel GPU. Thus, the
+//         horizontal resolution, according to the computer, was 1/2 the 
+//			  physical resolution of the screen...
+//         Later, this display was connected via a single-to-dual pixel
+//         converter. At this point, the EDID information shouldn't rely in
+//         any way on the fact that the display is a dual-pixel display
+//         since it looks like a single-pixel display to the computer.
+//         But the weird math remains here.
+//         As a result of these strange tests, there's some weird stuff in
+//         here regarding H_RES and PIX_CLK_OVERRIDE, etc.
+//         I haven't yet removed it.
+// e.g. As it's currently configured...
+//      (note that _LTD is referring to my LTD121... LCD. NOT "limited")
+//      PIX_CLK = PIX_CLK_TYP_LTD*2
+//                PIX_CLK_TYP_LTD = PIX_CLK_OVERRIDE
+//                                  PIX_CLK_OVERRIDE = PIX_CLK_GPU/2
+// Thus: PIX_CLK = PIX_CLK_GPU (minus rounding error)
+//
+//      H_ACTIVE = H_PIXEL_CLOCKS_LTD*2
+//                 H_PIXEL_CLOCKS_LTD = H_ACTIVE_GPU/2
+// Thus H_ACTIVE = H_ACTIVE_GPU
+//
+// H_BLANKING = H_BLANKING_TYP_LTD*2
+//              H_BLANKING_TYP_LTD = (H_FP_GPU+H_WIDTH_GPU+H_BP_GPU)/2 
+// H_BLANKING = H_FP_GPU + H_WIDTH_GPU + H_BP_GPU
+//
+// V_ACTIVE = V_ACTIVE_GPU
+//
+// V_BLANKING = V_BLANKING_TYP
+//					 V_BLANKING_TYP = V_FP_GPU + V_WIDTH_GPU + V_BP_GPU
+//
+// THFP = THFP_LTD*2
+//        THFP_LTD = H_FP_GPU/2
+// THFP = H_FP_GPU
+//
+// THW = THW_LTD*2
+//       THW_LTD = H_WIDTH_GPU/2
+// THW = H_WIDTH_GPU
+//
+// TVFP = V_FP_GPU
+// TVW = V_WIDTH_GPU 
+
+
+#define PIX_CLK_OVERRIDE (PIX_CLK_GPU/2) //(50000000L)
 
 
 //WTF: 4196 Bytes in Text region, not complaining?!
@@ -91,6 +197,7 @@
 
 //This is the display's pixel-clock...
 #ifndef PIX_CLK_OVERRIDE
+#error "This error is just a message to me, in case my variables aren't set as I'd expected"
 #define PIX_CLK_TYP_LTD (54000000L)
 #else
 #define PIX_CLK_TYP_LTD PIX_CLK_OVERRIDE
@@ -110,9 +217,11 @@
 #define THW_LTD  (H_WIDTH_GPU/2)//(THW_MIN_LTD*2)
 
 #ifdef H_RES
+#error "This error is just a message to me, in case I have H_RES still defined"
 // #define H_IMAGE_SIZE_MM ((uint8_t)((H_IMAGE_SIZE_MM_LTD*H_RES)/1400L))
  #define H_IMAGE_SIZE_MM \
 	((uint8_t)((H_IMAGE_SIZE_MM_LTD*H_RES)/(H_ACTIVE_GPU)))
+ #define V_IMAGE_SIZE_MM	V_IMAGE_SIZE_MM_LTD
 
  #define PIX_CLK  (PIX_CLK_TYP_LTD)
  #define H_ACTIVE    (H_PIXEL_CLOCKS_LTD)
@@ -120,7 +229,8 @@
  #define THFP (THFP_LTD)
  #define THW (THW_LTD)
 #else
- #define H_IMAGE_SIZE_MM H_IMAGE_SIZE_MM_LTD
+ #define H_IMAGE_SIZE_MM	H_IMAGE_SIZE_MM_LTD
+ #define V_IMAGE_SIZE_MM	V_IMAGE_SIZE_MM_LTD
 
  #define PIX_CLK  (PIX_CLK_TYP_LTD*2)
  #define H_ACTIVE (H_PIXEL_CLOCKS_LTD*2)
@@ -161,7 +271,7 @@ uint8_t ledIndex = 0;
 #define EDIDARRAYLENGTH	128 //256
 
 
-//Initial values stolen (and modified NotYet) from HV121P01-101
+//Initial values stolen (and modified) from HV121P01-101
 // Notes from SPWG spec 3.8
 uint8_t edidArray[EDIDARRAYLENGTH] =
 {
@@ -217,6 +327,10 @@ uint8_t edidArray[EDIDARRAYLENGTH] =
  #error "TOBCD(val) doesn't work with values > 99..."
  #error "...either Project Ver or Product Num: congrats on making it this far!"
 #endif
+
+#warning "Using PROJ_VER as the display's product-code causes new versions"
+#warning " to no longer be compatible with SwitchResX's timings for the"
+#warning " old version... Something to contemplate..."
 	[0x0A]=	TOBCD(PROJ_VER),
 	[0x0B]=	TOBCD(MY_EDID_PRODUCT_NUM), //0x01,
 
@@ -434,8 +548,24 @@ uint8_t edidArray[EDIDARRAYLENGTH] =
 
 	[0x41]=	0,
 
-	[0x42]=	H_IMAGE_SIZE_MM,
-	[0x43]=	0xB8,	//Vertical Image Size = 184mm (low 8 bits)
+#if (H_IMAGE_SIZE_MM > 0xff)
+	#error "LCDreIDer doesn't yet parse H_IMAGE_SIZE_MM > 255"
+	#error "It should be a simple modification..."
+#else
+	#define H_IMAGE_SIZE_MM_LOWBYTE	H_IMAGE_SIZE_MM
+#endif
+
+#if (V_IMAGE_SIZE_MM > 0xff)
+	#error "LCDreIDer doesn't yet parse V_IMAGE_SIZE_MM > 255"
+	#error "It should be a simple modification..."
+#else
+	#define V_IMAGE_SIZE_MM_LOWBYTE	V_IMAGE_SIZE_MM
+#endif
+
+
+	[0x42]=	H_IMAGE_SIZE_MM_LOWBYTE,
+	[0x43]=	V_IMAGE_SIZE_MM_LOWBYTE,
+		//0xB8,	//Vertical Image Size = 184mm (low 8 bits)
 	[0x44]=	0x00,	// 4 bits of Hor Image Size + 4 bits of Ver Image Size
 	[0x45]=	0x00,	//Horizontal Border = 0 pixels
 	[0x46]=	0x00,	//Vertical Border = 0 lines
@@ -494,10 +624,60 @@ uint8_t edidArray[EDIDARRAYLENGTH] =
 	// With the exception of the last byte...
 	//  byte 0x59 "Module 'A' Revision = Example 00, 01, 02, 03, etc."
 	// (isn't the info from Timing1's last byte necessary here too?!)
+#if (!defined(ALT_TIMING) || !ALT_TIMING)
 	[0x48 ... 0x4A] = 0,
 	[0x4B]=	0x10,	// Dummy Descriptor
 	[0x4C ... 0x59] = 0,
+#else
+	//These are identical to Timing Descriptor #1, bytes 0x36-0x47
+	//with the exception of byte 0x59... (TBD)
+	// AND timing macros are suffixed with _ALT,
+	// e.g. PIX_CLK -> PIX_CLK_ALT
 
+	[0x48]=	((PIX_CLK_GPU_ALT/CLK_SCALE)&0xff),
+	[0x49]=	((PIX_CLK_GPU_ALT/CLK_SCALE)>>8),
+
+	[0x4A]=	((H_ACTIVE_GPU_ALT)&0xff),
+	[0x4B]=	((H_BLANKING_ALT)&0xff),
+	[0x4C]=	(((H_ACTIVE_GPU_ALT)&0xf00)>>4) | \
+				(((H_BLANKING_ALT)&0xf00)>>8),
+
+	[0x4D]=  ((V_ACTIVE_GPU_ALT)&0xff),
+	[0x4E]=  ((V_BLANKING_ALT)&0xff),
+	[0x4F]=  (((V_ACTIVE_GPU_ALT)&0xf00)>>4) | \
+				(((V_BLANKING_ALT)&0xf00)>>8),
+
+	[0x50]= ((H_FP_GPU_ALT)&0xff),
+	[0x51]= ((H_WIDTH_GPU_ALT)&0xff),
+	[0x52]= (((V_FP_GPU_ALT)&0x0f)<<4) | ((V_WIDTH_GPU_ALT)&0x0f),
+
+#if(H_FP_GPU_ALT > 0xff)
+#error "H_FP_GPU_ALT > 0xff is not yet implemented"
+#endif
+#if (H_WIDTH_GPU_ALT > 0xff)
+#error "H_WIDTH_GPU_ALT > 0xff is not yet implemented"
+#endif
+#if (V_FP_GPU_ALT > 0xf)
+#error "V_FP_GPU_ALT > 0xf is not yet implemented"
+#endif
+#if (V_WIDTH_GPU_ALT > 0xf)
+#error "V_WIDTH_GPU_ALT > 0xf is not yet implemented"
+#endif
+	[0x53]=	0, //Upper bits are not implemented
+
+	[0x54]=	H_IMAGE_SIZE_MM_LOWBYTE,
+	[0x55]=	V_IMAGE_SIZE_MM_LOWBYTE,
+		//0xB8,	//Vertical Image Size = 184mm (low 8 bits)
+	[0x56]=	0x00,	// 4 bits of Hor Image Size + 4 bits of Ver Image Size
+	[0x57]=	0x00,	//Horizontal Border = 0 pixels
+	[0x58]=	0x00,	//Vertical Border = 0 lines
+
+
+	//This byte is different from 0x47, according to spwg:
+	// "Module “A” Revision =          Example: 00, 01, 02, 03, etc."
+	// (Doesn't it need DE, polarity, etc?!)
+	[0x59]=	0,
+#endif
 // Detailed timing/monitor descriptor #3
 	//SPWG: Shows #3 as same-format as HV121's #4
 	// SPWG notes placed there
